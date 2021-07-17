@@ -12,7 +12,6 @@ tar vxaf bochs-2.6.11.tar.gz
 
 echo "cp bochsrc,disk.img and disk80.img to bochs-2.6.11"
 cp bochsrc    bochs-2.6.11
-cp disk.img   bochs-2.6.11
 cp disk80.img bochs-2.6.11
 
 echo "Install the bochs"
