@@ -1,0 +1,788 @@
+<mxfile>
+    <diagram id="cBzdMWKJnjHEI5OB7MxI" name="main">
+        <mxGraphModel dx="7107" dy="3434" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="3" target="4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="&lt;font style=&quot;font-size: 36px;&quot;&gt;BIOS&lt;br style=&quot;font-size: 36px;&quot;&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=36;strokeWidth=3;fillColor=#a0522d;strokeColor=#6D1F00;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="330" y="240" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="&lt;font style=&quot;font-size: 23px;&quot;&gt;boot/mbr.S&lt;br style=&quot;font-size: 23px;&quot;&gt;vstart=0x7c00&lt;br style=&quot;font-size: 23px;&quot;&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=23;fillColor=#a20025;strokeColor=#6F0000;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="300" y="350" width="180" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="cUB33Ch-xqm_0Tlhxfmv-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="5" target="cUB33Ch-xqm_0Tlhxfmv-8" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="&lt;font style=&quot;font-size: 24px&quot;&gt;boot/loader.S&lt;br&gt;LOADER_BASE_ADDR&amp;nbsp; 0x900&lt;br&gt;LOADER_START_SECTOR 0x2&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;labelPosition=center;verticalLabelPosition=middle;align=center;verticalAlign=middle;fontSize=19;fillColor=#a20025;strokeColor=#6F0000;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="180" y="440" width="420" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#a0522d;strokeColor=#FFFFFF;" parent="1" source="6" target="9" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="&lt;font style=&quot;font-size: 57px&quot;&gt;佛祖保佑永无bug(doge)&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#a0522d;strokeColor=#6D1F00;fontColor=#ffffff;strokeWidth=4;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="-200" width="720" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="4" target="5" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="490" y="430" as="sourcePoint"/>
+                        <mxPoint x="540" y="380" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="cUB33Ch-xqm_0Tlhxfmv-8" value="&lt;font style=&quot;font-size: 24px&quot;&gt;kernel&lt;br&gt;KERNEL_BIN_BASE_ADDR equ 0x7000_0&lt;br&gt;KERNEL_START_SECTOR equ 0x9&lt;br&gt;KERNEL_ENTRY_POINT equ 0xc000_1500&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=19;fillColor=#a20025;strokeColor=#6F0000;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="140" y="570" width="500" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="cUB33Ch-xqm_0Tlhxfmv-10" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;boot/include/boot.inc&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;fillColor=#647687;strokeColor=#314354;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="780" y="455" width="310" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="cUB33Ch-xqm_0Tlhxfmv-11" value="" style="endArrow=classic;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" parent="1" source="4" target="cUB33Ch-xqm_0Tlhxfmv-10" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="520" y="530" as="sourcePoint"/>
+                        <mxPoint x="570" y="480" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="cUB33Ch-xqm_0Tlhxfmv-12" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="5" target="cUB33Ch-xqm_0Tlhxfmv-10" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="520" y="530" as="sourcePoint"/>
+                        <mxPoint x="570" y="480" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="cUB33Ch-xqm_0Tlhxfmv-14" value="" style="endArrow=classic;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" parent="1" source="cUB33Ch-xqm_0Tlhxfmv-8" target="cUB33Ch-xqm_0Tlhxfmv-10" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="520" y="530" as="sourcePoint"/>
+                        <mxPoint x="570" y="480" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="58" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="cUB33Ch-xqm_0Tlhxfmv-16" target="26" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="cUB33Ch-xqm_0Tlhxfmv-16" value="&lt;font style=&quot;font-size: 36px&quot;&gt;kernel&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fa6800;strokeColor=#C73500;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="-2270" y="5476" width="210" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="61" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="38" target="60" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="222" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="cUB33Ch-xqm_0Tlhxfmv-17" target="221" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="cUB33Ch-xqm_0Tlhxfmv-17" value="&lt;font style=&quot;font-size: 36px&quot;&gt;user&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d80073;strokeColor=#A50040;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="-1170" y="5479" width="250" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#f5f5f5;strokeColor=#FFFFFF;" parent="1" source="9" target="3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="&lt;font style=&quot;font-size: 24px&quot;&gt;&lt;span&gt;bochs&lt;/span&gt;&lt;br&gt;&lt;span&gt;bochsx86汇编开源平台&lt;/span&gt;&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#a0522d;strokeColor=#6D1F00;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="225" y="130" width="330" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="63" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="26" target="62" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="lib/kernel/io.h&lt;br style=&quot;font-size: 19px;&quot;&gt;对底层硬件端口直接操作" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=19;" parent="1" vertex="1">
+                    <mxGeometry x="-2270" y="5695" width="210" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="&lt;font&gt;&lt;span style=&quot;font-size: 36px&quot;&gt;lib&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 36px&quot;&gt;依赖库&lt;/span&gt;&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e3c800;strokeColor=#B09500;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="-1760" y="5230" width="240" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="" style="endArrow=classic;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="38" target="cUB33Ch-xqm_0Tlhxfmv-16" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="-1640" y="5550" as="sourcePoint"/>
+                        <mxPoint x="-1920" y="5430" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="40" value="" style="endArrow=classic;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="38" target="cUB33Ch-xqm_0Tlhxfmv-17" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="-1640" y="5550" as="sourcePoint"/>
+                        <mxPoint x="-1590" y="5500" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="41" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=16;" parent="1" source="42" target="44" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="72" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="42" target="68" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="641" y="4620" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="42" value="&lt;font style=&quot;font-size: 42px&quot;&gt;&lt;span&gt;kernel&lt;/span&gt;&lt;br&gt;&lt;span&gt;内核&lt;/span&gt;&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e3c800;strokeColor=#B09500;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="239" y="4550" width="304" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=16;" parent="1" source="44" target="46" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;kernel/kernel.S&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=24;fillColor=#a20025;strokeColor=#6F0000;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="286" y="4990" width="210" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=16;strokeWidth=1;" parent="1" source="46" target="49" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;kernel/interupt.h&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=24;" parent="1" vertex="1">
+                    <mxGeometry x="286" y="5139" width="210" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=16;strokeWidth=1;" parent="1" source="49" target="54" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;kernel/global.h&lt;br style=&quot;font-size: 24px;&quot;&gt;宏定义&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=24;" parent="1" vertex="1">
+                    <mxGeometry x="286" y="5260" width="210" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="105" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="60" target="104" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="60" value="&lt;font style=&quot;font-size: 24px&quot;&gt;lib/stdint.h&lt;br&gt;定义数据类型&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=19;" parent="1" vertex="1">
+                    <mxGeometry x="-1760" y="5662" width="240" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="65" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="62" target="203" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-2165" y="5986" as="sourcePoint"/>
+                        <mxPoint x="-2165" y="6067" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="62" value="&lt;font style=&quot;font-size: 24px&quot;&gt;lib/kernel/print.h&lt;br&gt;显存输出函数的头文件&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=19;" parent="1" vertex="1">
+                    <mxGeometry x="-2290" y="5865" width="250" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="Kfj1junfK5iKc4zszGpC-106" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" target="Kfj1junfK5iKc4zszGpC-105" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-2165" y="6106" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="68" value="&lt;font style=&quot;font-size: 24px&quot;&gt;main.C&lt;br&gt;主函数并用于测试&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#008a00;strokeColor=#005700;fontColor=#ffffff;fontSize=23;" parent="1" vertex="1">
+                    <mxGeometry x="920" y="4585" width="210" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="98" value="" style="swimlane;startSize=0;strokeWidth=7;fontColor=#ffffff;fillColor=#33FFFF;strokeColor=#33FFFF;" parent="1" vertex="1">
+                    <mxGeometry x="100" y="4930" width="1160" height="1080" as="geometry"/>
+                </mxCell>
+                <mxCell id="54" value="&lt;font style=&quot;font-size: 24px&quot;&gt;kernel/interrupt.c&lt;br style=&quot;font-size: 24px&quot;&gt;中断程序的主要实现部分&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=24;" parent="98" vertex="1">
+                    <mxGeometry x="101" y="480" width="380" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="168" value="&lt;font style=&quot;font-size: 55px&quot;&gt;启动中断流程&lt;br&gt;3&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;strokeColor=#001DBC;fillColor=#0050ef;fontColor=#ffffff;" parent="98" vertex="1">
+                    <mxGeometry x="610" y="160" width="440" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="84" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;device/timer.h &amp;amp;&amp;amp; device/timer.c&lt;br style=&quot;font-size: 24px;&quot;&gt;用计数器/定时器8253来设置时钟中断的频率&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=24;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" parent="98" vertex="1">
+                    <mxGeometry x="600" y="730" width="520" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="169" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="98" source="55" target="84" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="510" y="780" as="sourcePoint"/>
+                        <mxPoint x="930" y="700" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="55" value="lib/kernel/io.h&lt;br style=&quot;font-size: 24px;&quot;&gt;对底层硬件端口直接操作" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=24;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" parent="98" vertex="1">
+                    <mxGeometry x="710" y="480" width="300" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="53" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=16;strokeWidth=1;" parent="98" source="54" target="55" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="o5d0T1XVLujV0jK2eSXS-103" value="" style="swimlane;startSize=0;strokeWidth=6;fillColor=#e3c800;fontColor=#000000;strokeColor=#00FFFF;" parent="1" vertex="1">
+                    <mxGeometry x="130" y="330" width="540" height="390" as="geometry"/>
+                </mxCell>
+                <mxCell id="o5d0T1XVLujV0jK2eSXS-106" value="&lt;span style=&quot;font-size: 55px;&quot;&gt;加载内核&lt;/span&gt;&lt;br style=&quot;font-size: 55px;&quot;&gt;&lt;span style=&quot;font-size: 55px;&quot;&gt;1&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fillColor=#0050ef;strokeColor=#001DBC;fontColor=#ffffff;fontSize=55;" parent="1" vertex="1">
+                    <mxGeometry x="-320" y="440" width="300" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="1OhImP-a9AdKQExxHosn-102" value="" style="endArrow=none;html=1;strokeWidth=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;strokeColor=#FF0000;" parent="1" source="o5d0T1XVLujV0jK2eSXS-106" target="4" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="110" y="700" as="sourcePoint"/>
+                        <mxPoint x="160" y="650" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="1OhImP-a9AdKQExxHosn-103" value="" style="endArrow=none;html=1;strokeWidth=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#FF0000;" parent="1" source="o5d0T1XVLujV0jK2eSXS-106" target="cUB33Ch-xqm_0Tlhxfmv-8" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="-10" y="502.5" as="sourcePoint"/>
+                        <mxPoint x="310" y="390" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="236" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="104" target="235" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="104" value="&lt;font style=&quot;font-size: 24px&quot;&gt;lib/string.h &amp;amp;&amp;amp; lib/string.c&lt;br&gt;实现字符串函数&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=19;" parent="1" vertex="1">
+                    <mxGeometry x="-1840" y="5888" width="400" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="hhxS7JBDP3Vizc06WxIX-105" value="&lt;font style=&quot;font-size: 155px&quot;&gt;开始实现内核&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#a0522d;strokeColor=#6D1F00;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="-1460" y="1010" width="3700" height="211.97" as="geometry"/>
+                </mxCell>
+                <mxCell id="hhxS7JBDP3Vizc06WxIX-107" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="cUB33Ch-xqm_0Tlhxfmv-8" target="hhxS7JBDP3Vizc06WxIX-105" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="310" y="990" as="sourcePoint"/>
+                        <mxPoint x="390" y="1060" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="hhxS7JBDP3Vizc06WxIX-117" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;" parent="1" source="hhxS7JBDP3Vizc06WxIX-113" target="hhxS7JBDP3Vizc06WxIX-116" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="hhxS7JBDP3Vizc06WxIX-113" value="&lt;span style=&quot;font-size: 36px&quot;&gt;device&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 36px&quot;&gt;设备&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e3c800;strokeColor=#B09500;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="1617" y="2397" width="210" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="hhxS7JBDP3Vizc06WxIX-115" value="" style="endArrow=classic;html=1;strokeWidth=6;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="hhxS7JBDP3Vizc06WxIX-105" target="hhxS7JBDP3Vizc06WxIX-113" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1050" y="2010" as="sourcePoint"/>
+                        <mxPoint x="1100" y="1960" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="188" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FFFFFF;" parent="1" source="hhxS7JBDP3Vizc06WxIX-116" target="187" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="hhxS7JBDP3Vizc06WxIX-116" value="device/timer.c &amp;amp;&amp;amp; device/timer.h&lt;br style=&quot;font-size: 24px;&quot;&gt;时钟中断调用" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=24;" parent="1" vertex="1">
+                    <mxGeometry x="1537" y="2647" width="370" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="DerQ-0CCG4LgB0Z5V_B5-108" value="" style="endArrow=classic;html=1;fontSize=19;strokeWidth=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" parent="1" source="hhxS7JBDP3Vizc06WxIX-105" target="38" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="-1370" y="1420" as="sourcePoint"/>
+                        <mxPoint x="-1320" y="1370" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="DerQ-0CCG4LgB0Z5V_B5-115" value="" style="swimlane;startSize=0;fontSize=19;fontColor=#ffffff;fillColor=#1BA1E2;strokeColor=#00FFFF;strokeWidth=6;" parent="1" vertex="1">
+                    <mxGeometry x="-2990" y="5826" width="1030" height="390" as="geometry">
+                        <mxRectangle x="-2150" y="2080" width="50" height="40" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="66" value="lib/kernel/print.S&lt;br style=&quot;font-size: 24px&quot;&gt;分别实现了三个函数" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=24;" parent="DerQ-0CCG4LgB0Z5V_B5-115" vertex="1">
+                    <mxGeometry x="280" y="251" width="290" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="203" value="&lt;font style=&quot;font-size: 24px&quot;&gt;lib/kernel/print.S&lt;br&gt;用汇编语言实现显存输出函数&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=19;" parent="DerQ-0CCG4LgB0Z5V_B5-115" vertex="1">
+                    <mxGeometry x="650" y="251" width="350" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="67" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="DerQ-0CCG4LgB0Z5V_B5-115" source="203" target="66" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="650" y="281" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="M-1V6tS6ZaGDZcfUaPYZ-105" value="&lt;font style=&quot;font-size: 55px&quot;&gt;实现输出函数用作测试&lt;br&gt;2&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=19;fillColor=#0050ef;strokeColor=#001DBC;fontColor=#ffffff;" parent="DerQ-0CCG4LgB0Z5V_B5-115" vertex="1">
+                    <mxGeometry x="30" y="20" width="592" height="171" as="geometry"/>
+                </mxCell>
+                <mxCell id="111" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="Kfj1junfK5iKc4zszGpC-105" target="110" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="Kfj1junfK5iKc4zszGpC-105" value="&lt;font style=&quot;font-size: 24px&quot;&gt;lib/kernell/bitmap.h &amp;amp;&amp;amp; lib/kernel/bitmap.c&lt;br&gt;位图的实现&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=19;" parent="1" vertex="1">
+                    <mxGeometry x="-2412.5" y="6310" width="495" height="86" as="geometry"/>
+                </mxCell>
+                <mxCell id="106" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=16;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="hhxS7JBDP3Vizc06WxIX-105" target="42" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="366" y="1699.999999999999" as="sourcePoint"/>
+                        <mxPoint x="366" y="2009.999999999999" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="O1IT8Tt7Mb2KxOppkfMD-115" value="" style="swimlane;startSize=0;labelBackgroundColor=#ffffff;fontSize=36;fontColor=#ffffff;fillColor=#1ba1e2;strokeColor=#33FFFF;strokeWidth=6;" parent="1" vertex="1">
+                    <mxGeometry x="-10" y="6140" width="1410" height="540" as="geometry"/>
+                </mxCell>
+                <mxCell id="O1IT8Tt7Mb2KxOppkfMD-116" value="&lt;font style=&quot;font-size: 55px&quot;&gt;内存管理系统&lt;br&gt;4&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;strokeColor=#001DBC;fillColor=#0050ef;fontColor=#ffffff;" parent="O1IT8Tt7Mb2KxOppkfMD-115" vertex="1">
+                    <mxGeometry x="490" y="310" width="362.73" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="137" value="&lt;font style=&quot;font-size: 24px&quot;&gt;lib/string.h &amp;amp;&amp;amp; lib/string.c&lt;br&gt;实现字符串函数&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=19;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" parent="O1IT8Tt7Mb2KxOppkfMD-115" vertex="1">
+                    <mxGeometry x="945" y="135" width="400" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="H7YDsHE925v3Gwg-0XOy-106" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;kernel/memory.h &amp;amp;&amp;amp; kernel/memory.c&lt;br style=&quot;font-size: 24px;&quot;&gt;内存管理系统的实现&lt;br style=&quot;font-size: 24px;&quot;&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=24;" parent="O1IT8Tt7Mb2KxOppkfMD-115" vertex="1">
+                    <mxGeometry x="50" y="140" width="700" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="155" value="" style="endArrow=classic;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="O1IT8Tt7Mb2KxOppkfMD-115" source="137" target="H7YDsHE925v3Gwg-0XOy-106" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1060" y="80" as="sourcePoint"/>
+                        <mxPoint x="1110" y="30" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="141" value="&lt;font style=&quot;font-size: 24px&quot;&gt;lib/kernell/bitmap.h &amp;amp;&amp;amp; lib/kernel/bitmap.c&lt;br&gt;位图的实现&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=19;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" parent="O1IT8Tt7Mb2KxOppkfMD-115" vertex="1">
+                    <mxGeometry x="900" y="397" width="490" height="83" as="geometry"/>
+                </mxCell>
+                <mxCell id="143" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="O1IT8Tt7Mb2KxOppkfMD-115" source="137" target="141" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="865" y="525" as="sourcePoint"/>
+                        <mxPoint x="1145" y="420" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="109" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=33;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="107" target="42" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="170" y="4590" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="107" value="&lt;font style=&quot;font-size: 33px;&quot;&gt;kernel/kernel.S&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=33;fillColor=#a20025;strokeColor=#6F0000;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="-210" y="4595" width="260" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="281" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="110" target="280">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="110" value="&lt;font style=&quot;font-size: 24px&quot;&gt;lib/kernel/list.c &amp;amp;&amp;amp; lib/kernel/list.h&lt;br&gt;双端队列的实现用于实现线程序列&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=19;" parent="1" vertex="1">
+                    <mxGeometry x="-2365" y="6490" width="400" height="86" as="geometry"/>
+                </mxCell>
+                <mxCell id="117" value="" style="endArrow=classic;html=1;strokeWidth=6;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="hhxS7JBDP3Vizc06WxIX-105" target="118" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1809.9999999999982" y="1221.9700000000003" as="sourcePoint"/>
+                        <mxPoint x="2520" y="1540" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="118" value="&lt;span style=&quot;font-size: 36px&quot;&gt;thread&lt;br&gt;线程&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e3c800;strokeColor=#B09500;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="3130" y="3401" width="271.25" height="155" as="geometry"/>
+                </mxCell>
+                <mxCell id="122" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="118" target="123" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="3255" y="3646" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="126" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="123" target="125" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="128" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="123" target="127" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="123" value="thread/thread.c &amp;amp;&amp;amp; thread/thread.h&lt;br style=&quot;font-size: 24px&quot;&gt;定义线程的基本结构并且实现线程" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=24;" parent="1" vertex="1">
+                    <mxGeometry x="3055.31" y="3771" width="420.63" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="125" value="thread/switch.S&lt;br&gt;保存中断时的上下文" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=24;fillColor=#a20025;strokeColor=#6F0000;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="3055.31" y="3931" width="420.63" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="130" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="127" target="129" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="127" value="&lt;font style=&quot;font-size: 24px&quot;&gt;kernel/interrupt.h &amp;amp;&amp;amp; kernel/interrupt.c&lt;br style=&quot;font-size: 24px&quot;&gt;添加了中断处理函数来处理线程中断&lt;br style=&quot;font-size: 24px&quot;&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=24;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="3620" y="3771" width="700" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="136" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="129" target="134" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="129" value="&lt;font style=&quot;font-size: 24px&quot;&gt;lib/kernel/list.c &amp;amp;&amp;amp; lib/kernel/list.h&lt;br&gt;双端队列,用于实现线程序列&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=19;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="3625" y="3936" width="690" height="86" as="geometry"/>
+                </mxCell>
+                <mxCell id="133" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="134" target="135" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="177" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="134" target="176" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="134" value="device/timer.c &amp;amp;&amp;amp; device/timer.h&lt;br style=&quot;font-size: 24px;&quot;&gt;时钟中断调用" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=24;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="3785" y="4106" width="370" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="135" value="intr_timer_handler(void)&#10;新添加了这个函数&#10;用于时钟的中断处理函数处理线程" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=24;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="4220" y="4076" width="370" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="148" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="79" target="DerQ-0CCG4LgB0Z5V_B5-105" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="79" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;kernel/init.c &amp;amp;&amp;amp; kernel/init.h&lt;br style=&quot;font-size: 24px;&quot;&gt;负责初始化所有模块&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=24;" parent="1" vertex="1">
+                    <mxGeometry x="176" y="5654" width="430" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="146" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="54" target="79" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="500" y="5750" as="sourcePoint"/>
+                        <mxPoint x="550" y="5700" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="DerQ-0CCG4LgB0Z5V_B5-105" value="&lt;font style=&quot;font-size: 24px&quot;&gt;kernel/debug.c &amp;amp;&amp;amp; kernel/debug.h&lt;br style=&quot;font-size: 24px&quot;&gt;输出错误位置&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=24;" parent="1" vertex="1">
+                    <mxGeometry x="200" y="5890" width="380" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="151" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="DerQ-0CCG4LgB0Z5V_B5-105" target="H7YDsHE925v3Gwg-0XOy-106" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="610" y="6190" as="sourcePoint"/>
+                        <mxPoint x="660" y="6140" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="172" value="" style="swimlane;startSize=0;fontColor=#ffffff;fillColor=#33FFFF;strokeWidth=7;strokeColor=#00FFFF;" parent="1" vertex="1">
+                    <mxGeometry x="2970" y="3686" width="1660" height="690" as="geometry"/>
+                </mxCell>
+                <mxCell id="173" value="&lt;font style=&quot;font-size: 55px&quot;&gt;线程&lt;br&gt;5&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;strokeColor=#001DBC;fillColor=#0050ef;fontColor=#ffffff;" parent="172" vertex="1">
+                    <mxGeometry x="320" y="420" width="440" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="176" value="&lt;span style=&quot;font-size: 33px&quot;&gt;kernel/kernel.S&lt;br&gt;保护中断时上下文&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=24;fillColor=#a20025;strokeColor=#6F0000;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="3785" y="4266" width="370" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="181" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FFFFFF;" parent="1" source="178" target="180" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="195" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FFFFFF;" parent="1" source="178" target="194" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="178" value="device/keyboard.h &amp;amp;&amp;amp; device/keyboard.c&lt;br&gt;实现键盘输入" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=24;" parent="1" vertex="1">
+                    <mxGeometry x="1445" y="3342" width="550" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="279" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="180" target="278">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="180" value="device/ioqueue.h &amp;amp;&amp;amp; device/ioqueue.c&lt;br&gt;io输入输出队列&lt;br&gt;解决输入输出的生产者消费者问题" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=24;" parent="1" vertex="1">
+                    <mxGeometry x="1430" y="3842" width="580" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="184" value="thread/sync.h &amp;amp;&amp;amp; thread/sync.c&lt;br&gt;实现同步锁" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=24;" parent="1" vertex="1">
+                    <mxGeometry x="3080.63" y="4470" width="370" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="186" value="" style="endArrow=classic;html=1;strokeColor=#FFFFFF;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="125" target="184" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="2960" y="4316" as="sourcePoint"/>
+                        <mxPoint x="3010" y="4266" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="191" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FFFFFF;" parent="1" source="187" target="190" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="187" value="device/console.c &amp;amp;&amp;amp; device/console.h&lt;br&gt;用锁实现初始化终端与控制台" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=24;" parent="1" vertex="1">
+                    <mxGeometry x="1477" y="2982" width="490" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="189" value="" style="endArrow=classic;html=1;strokeColor=#FFFFFF;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="187" target="178" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1677" y="3332" as="sourcePoint"/>
+                        <mxPoint x="1727" y="3282" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="193" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FFFFFF;" parent="1" source="190" target="192" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="190" value="thread/sync.h &amp;amp;&amp;amp; thread/sync.c&lt;br&gt;实现同步锁" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=24;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="2122" y="2982" width="370" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="192" value="thread/thread.c &amp;amp;&amp;amp; thread/thread.h&lt;br&gt;添加了&lt;br&gt;thread_block &amp;amp;&amp;amp; thread_unblock" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=24;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="2102" y="3142" width="410" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="197" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FFFFFF;" parent="1" source="194" target="196" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="194" value="kernel/init.c &amp;amp;&amp;amp; kernel/init.h&lt;br&gt;添加了控制台的初始化" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=24;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="2093.5" y="3342" width="427" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="199" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FFFFFF;" parent="1" source="196" target="198" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="196" value="kernel/kernel.S&lt;br&gt;添加键盘中断处理程序" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=24;fillColor=#a20025;strokeColor=#6F0000;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="2093.5" y="3502" width="427" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="198" value="kernel/interrupt.c &amp;amp;&amp;amp; interrupt.h&lt;br&gt;pic_init 打开键盘中断" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=24;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="2093.5" y="3662" width="427" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="200" value="" style="swimlane;startSize=0;strokeWidth=6;strokeColor=#00FFFF;" parent="1" vertex="1">
+                    <mxGeometry x="1400" y="2912" width="1150" height="1110" as="geometry"/>
+                </mxCell>
+                <mxCell id="201" value="&lt;font style=&quot;font-size: 55px&quot;&gt;输入输出系统&lt;br&gt;6&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;strokeColor=#001DBC;fillColor=#0050ef;fontColor=#ffffff;" parent="200" vertex="1">
+                    <mxGeometry x="729.27" y="875" width="362.73" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="207" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="204" target="206" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="204" value="&lt;font style=&quot;font-size: 36px&quot;&gt;&lt;span style=&quot;font-size: 36px&quot;&gt;userprog&lt;br&gt;&lt;/span&gt;用户进程&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e3c800;strokeColor=#B09500;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="-2670" y="3062" width="426.67" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="205" value="" style="endArrow=classic;html=1;fontSize=19;strokeWidth=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0;exitY=1;exitDx=0;exitDy=0;" parent="1" source="hhxS7JBDP3Vizc06WxIX-105" target="204" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="-180" y="1221.9700000000003" as="sourcePoint"/>
+                        <mxPoint x="-510" y="1764" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="210" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="206" target="209" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="-1546" y="3492"/>
+                            <mxPoint x="-1546" y="3752"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="212" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="206" target="211" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="206" value="&lt;font style=&quot;font-size: 24px&quot;&gt;userprog/tss.h &amp;amp;&amp;amp; userprog/tss.c&lt;br&gt;TSS的定义及实现&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=19;" parent="1" vertex="1">
+                    <mxGeometry x="-2701.67" y="3447" width="490" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="214" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="209" target="213" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="220" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="209" target="219" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="228" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="209" target="227" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="209" value="&lt;font style=&quot;font-size: 24px&quot;&gt;userprog/process.h &amp;amp;&amp;amp; userprog/process.c&lt;br&gt;实现用户进程&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=19;" parent="1" vertex="1">
+                    <mxGeometry x="-2701.67" y="3707" width="490" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="211" value="&lt;font style=&quot;font-size: 24px&quot;&gt;kernel/global.h&lt;br&gt;TSS描述符属性&lt;br&gt;eflags属性&lt;br&gt;宏DIV_ROUND_UP&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=19;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="-2131.67" y="3397" width="490" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="216" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="213" target="215" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="213" value="&lt;font style=&quot;font-size: 24px&quot;&gt;thread/thread.h &amp;amp;&amp;amp; thread/thread.c&lt;br&gt;PCB新添加了userprog_vaddr 作为用户进程的虚拟地址&lt;br&gt;并进行初始化等处理&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=19;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="-3410" y="3707" width="628.33" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="215" value="&lt;font style=&quot;font-size: 24px&quot;&gt;kernel/memory.c &amp;amp;&amp;amp; kernel/memory.h&lt;br&gt;pool添加了lock对申请内存上锁、vaddr完善用户内存池&lt;br&gt;get_user_pages &amp;amp;&amp;amp; get_a_page&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=19;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="-3410" y="3877" width="628.33" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="217" value="" style="swimlane;startSize=0;strokeColor=#00FFFF;strokeWidth=6;" parent="1" vertex="1">
+                    <mxGeometry x="-3480" y="3307" width="1870" height="685" as="geometry"/>
+                </mxCell>
+                <mxCell id="218" value="&lt;font style=&quot;font-size: 55px&quot;&gt;用户进程的实现&lt;br&gt;7&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=19;fillColor=#0050ef;strokeColor=#001DBC;fontColor=#ffffff;" parent="217" vertex="1">
+                    <mxGeometry x="20" y="18" width="592" height="171" as="geometry"/>
+                </mxCell>
+                <mxCell id="219" value="lib/kernel/list.h &amp;amp;&amp;amp; lib/kernel/list.c&lt;br&gt;就绪队列" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=19;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="-2131.67" y="3707" width="490" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="224" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="221" target="223" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="329" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=55;" edge="1" parent="1" source="221" target="328">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="221" value="&lt;span style=&quot;font-size: 24px&quot;&gt;lib/user/syscall.c &amp;amp;&amp;amp; lib/user/syscall.h&lt;br&gt;系统调用&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-1310" y="6719" width="530" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="230" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="223" target="229" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-495" y="6936.65" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="223" value="&lt;span style=&quot;font-size: 24px&quot;&gt;kernel/kernel.S&lt;br&gt;安装中断向量0x80对应的中断程序&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#a20025;strokeColor=#6F0000;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="-700" y="6719" width="410" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="234" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="225" target="223" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="225" value="&lt;span style=&quot;font-size: 24px&quot;&gt;kernel/interrupt.h &amp;amp;&amp;amp; kernel/interrupt.h&lt;br&gt;安装0x80中断描述符&amp;nbsp;&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="-700" y="6519" width="410" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="312" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="227" target="311">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="227" value="&lt;font style=&quot;font-size: 24px&quot;&gt;userprog/syscall-init.c &amp;amp;&amp;amp; userprog/syscall-init.h&lt;br&gt;初始化系统调用&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=19;" parent="1" vertex="1">
+                    <mxGeometry x="-2741.67" y="4253" width="570" height="104.69" as="geometry"/>
+                </mxCell>
+                <mxCell id="246" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="229" target="237" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="229" value="&lt;font style=&quot;font-size: 24px&quot;&gt;userprog/syscall-init.c &amp;amp;&amp;amp; userprog/syscall-init.h&lt;br&gt;初始化系统调用&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=19;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="-780" y="6944.3099999999995" width="570" height="104.69" as="geometry"/>
+                </mxCell>
+                <mxCell id="233" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="231" target="225" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="231" value="&lt;span style=&quot;font-size: 24px&quot;&gt;thread/thread.c &amp;amp;&amp;amp; thread/thread.h&lt;br&gt;分配PID锁&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="-700" y="6319" width="410" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="235" value="&lt;font style=&quot;font-size: 24px&quot;&gt;lib/stdio.h &amp;amp;&amp;amp; lib/stdio.c&lt;br&gt;实现标准输出函数&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=19;" parent="1" vertex="1">
+                    <mxGeometry x="-1840" y="6058" width="400" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="247" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="237" target="240" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="237" value="&lt;font style=&quot;font-size: 24px&quot;&gt;lib/stdio.h &amp;amp;&amp;amp; lib/stdio.c&lt;br&gt;实现标准输出函数printf&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=19;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="-695" y="7219" width="400" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="240" value="&lt;font style=&quot;font-size: 24px&quot;&gt;kernel/memory.h &amp;amp;&amp;amp; kernel/memory.c&lt;br&gt;实现内存块分配&lt;br&gt;为sys_malloc与sys_free函数实现作准备&amp;nbsp;&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=19;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="-780" y="7444.3099999999995" width="570" height="104.69" as="geometry"/>
+                </mxCell>
+                <mxCell id="252" value="" style="endArrow=classic;startArrow=classic;html=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;strokeColor=#00FF80;strokeWidth=4;" parent="1" target="221" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="-690" y="7269" as="sourcePoint"/>
+                        <mxPoint x="-720" y="7239" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="-912" y="7269"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="253" value="" style="endArrow=classic;startArrow=classic;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;strokeColor=#00FF80;strokeWidth=4;" parent="1" source="240" target="221" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="-680" y="7279" as="sourcePoint"/>
+                        <mxPoint x="-920" y="6839" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="-912" y="7497"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="254" value="" style="swimlane;startSize=0;strokeColor=#00FFFF;strokeWidth=6;" parent="1" vertex="1">
+                    <mxGeometry x="-1340" y="6269" width="1150" height="1320" as="geometry"/>
+                </mxCell>
+                <mxCell id="255" value="&lt;font style=&quot;font-size: 55px&quot;&gt;系统调用&lt;br&gt;8&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;strokeColor=#001DBC;fillColor=#0050ef;fontColor=#ffffff;" parent="254" vertex="1">
+                    <mxGeometry x="30" y="27" width="362.73" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="256" value="" style="endArrow=classic;html=1;strokeWidth=6;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="hhxS7JBDP3Vizc06WxIX-105" target="257" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="3250" y="1189.9999999999993" as="sourcePoint"/>
+                        <mxPoint x="3640" y="1720" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="257" value="&lt;span style=&quot;font-size: 36px&quot;&gt;fs&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 36px&quot;&gt;文件系统&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e3c800;strokeColor=#B09500;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="3735" y="1563.5" width="271.25" height="155" as="geometry"/>
+                </mxCell>
+                <mxCell id="262" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="258" target="261" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="258" value="fs/super-block.h&lt;br&gt;超级块" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=24;" parent="1" vertex="1">
+                    <mxGeometry x="3685.63" y="1923.5" width="370" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="259" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="258" target="258" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="260" value="" style="endArrow=classic;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="257" target="258" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="3555" y="1803.5" as="sourcePoint"/>
+                        <mxPoint x="3605" y="1753.5" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="264" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="261" target="263" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="261" value="fs/inode.c &amp;amp;&amp;amp; fs/inode.h&lt;br&gt;inode节点" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=24;" parent="1" vertex="1">
+                    <mxGeometry x="3685.63" y="2083.5" width="370" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="266" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="263" target="265" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="263" value="fs/file.c &amp;&amp; fs/file.h&#10;文件" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=24;" parent="1" vertex="1">
+                    <mxGeometry x="3685.63" y="2293.5" width="370" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="268" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="265" target="267" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="265" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;span style=&quot;color: rgb(240, 240, 240); font-family: helvetica; font-size: 24px; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: center; text-indent: 0px; text-transform: none; word-spacing: 0px; background-color: rgb(42, 42, 42);&quot;&gt;fs/dir.c &amp;amp;&amp;amp; fs/dir.h&lt;/span&gt;&lt;br style=&quot;color: rgb(240, 240, 240); font-family: helvetica; font-size: 24px; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: center; text-indent: 0px; text-transform: none; word-spacing: 0px; background-color: rgb(42, 42, 42);&quot;&gt;&lt;span style=&quot;color: rgb(240, 240, 240); font-family: helvetica; font-size: 24px; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: center; text-indent: 0px; text-transform: none; word-spacing: 0px; background-color: rgb(42, 42, 42);&quot;&gt;目录项&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=24;" parent="1" vertex="1">
+                    <mxGeometry x="3685.63" y="2553.5" width="370" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="267" value="fs/fs.c &amp;amp;&amp;amp; fs/fs.h&lt;br&gt;文件系统" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=24;" parent="1" vertex="1">
+                    <mxGeometry x="3685.63" y="2853.5" width="370" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="272" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="269" target="271" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="269" value="thread/thread.h &amp;amp;&amp;amp; thread/thread.c&lt;br&gt;添加了文件描述符" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=24;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="4225" y="2085" width="490" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="274" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="271" target="273" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="271" value="lib/user/syscall.c &amp;amp;&amp;amp; lib/user/syscall.h&lt;br&gt;添加write" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=24;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="4225" y="2245" width="490" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="273" value="lib/stdio.c &amp;amp;&amp;amp; lib/stido.h&lt;br&gt;写操作" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=24;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="4225" y="2463.5" width="490" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="276" value="" style="swimlane;startSize=0;strokeWidth=6;strokeColor=#00FFFF;" parent="1" vertex="1">
+                    <mxGeometry x="3560" y="1905.5" width="1205" height="1110" as="geometry"/>
+                </mxCell>
+                <mxCell id="277" value="&lt;span style=&quot;font-size: 55px&quot;&gt;文件系统&lt;br&gt;10&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;strokeColor=#001DBC;fillColor=#0050ef;fontColor=#ffffff;" parent="276" vertex="1">
+                    <mxGeometry x="729.27" y="875" width="362.73" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="283" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="278" target="282">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="278" value="device/ide.h &amp;amp;&amp;amp; device/ide.c&lt;br&gt;编写ide硬盘中断程序" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="1430" y="4570" width="580" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="280" value="&lt;font style=&quot;font-size: 24px&quot;&gt;&lt;span style=&quot;color: rgb(240 , 240 , 240) ; font-family: &amp;#34;helvetica&amp;#34; ; font-style: normal ; font-weight: 400 ; letter-spacing: normal ; text-align: center ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; background-color: rgb(42 , 42 , 42) ; display: inline ; float: none&quot;&gt;lib/kernel/stdio-kernel.c &amp;amp;&amp;amp; lib/kernel/stdio-kernel.h&lt;/span&gt;&lt;br style=&quot;color: rgb(240 , 240 , 240) ; font-family: &amp;#34;helvetica&amp;#34; ; font-style: normal ; font-weight: 400 ; letter-spacing: normal ; text-align: center ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; background-color: rgb(42 , 42 , 42)&quot;&gt;&lt;span style=&quot;color: rgb(240 , 240 , 240) ; font-family: &amp;#34;helvetica&amp;#34; ; font-style: normal ; font-weight: 400 ; letter-spacing: normal ; text-align: center ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; background-color: rgb(42 , 42 , 42) ; display: inline ; float: none&quot;&gt;实现内核输出函数&lt;/span&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=19;" vertex="1" parent="1">
+                    <mxGeometry x="-2430" y="6839" width="530" height="86" as="geometry"/>
+                </mxCell>
+                <mxCell id="285" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="282" target="284">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="282" value="lib/kernel/stdio-kernel.c &amp;&amp; lib/kernel/stdio-kernel.h&#10;实现内核输出函数" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=19;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="2122" y="4577" width="590" height="86" as="geometry"/>
+                </mxCell>
+                <mxCell id="287" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="284" target="286">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="284" value="kernel/interrupt.c &amp;amp;&amp;amp; kernel/interrupt.h&lt;br&gt;打开硬盘中断处理接口" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=19;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="2122" y="4743" width="590" height="86" as="geometry"/>
+                </mxCell>
+                <mxCell id="289" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="286" target="288">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="286" value="thread/thread.c &amp;amp;&amp;amp; thread/thread.h&lt;br&gt;创建idle线程" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=19;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="2122" y="4909" width="590" height="86" as="geometry"/>
+                </mxCell>
+                <mxCell id="291" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="288" target="290">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="288" value="device/timer.c &amp;amp;&amp;amp; device/timer.h&lt;br&gt;加入休眠函数" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=19;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="2122" y="5075" width="590" height="86" as="geometry"/>
+                </mxCell>
+                <mxCell id="290" value="disk80.img&lt;br&gt;用作硬盘" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=19;fillColor=#a20025;strokeColor=#6F0000;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="2122" y="5241" width="590" height="86" as="geometry"/>
+                </mxCell>
+                <mxCell id="299" value="" style="swimlane;startSize=0;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#00FFFF;strokeWidth=6;" vertex="1" parent="1">
+                    <mxGeometry x="1360" y="4495" width="1490" height="1295" as="geometry"/>
+                </mxCell>
+                <mxCell id="300" value="&lt;font style=&quot;font-size: 55px&quot;&gt;编写硬盘驱动程序&lt;br&gt;9&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;strokeColor=#001DBC;fillColor=#0050ef;fontColor=#ffffff;" vertex="1" parent="299">
+                    <mxGeometry x="790.5" y="939" width="533" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="304" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="301" target="303">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="301" value="&lt;font style=&quot;font-size: 36px&quot;&gt;command&lt;br&gt;实现内核的外部命令&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e3c800;strokeColor=#B09500;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="-3610" y="2367" width="426.67" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="302" value="" style="endArrow=classic;html=1;fontSize=19;strokeWidth=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="301" source="hhxS7JBDP3Vizc06WxIX-105">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="-2356" y="-10.004999999999427" as="sourcePoint"/>
+                        <mxPoint x="-2920" y="690" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="306" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="303" target="305">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="303" value="&lt;font style=&quot;font-size: 24px&quot;&gt;cat.c&amp;nbsp;&lt;br&gt;实现cat外部命令&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="-3610" y="2607" width="426.67" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="305" value="&lt;font style=&quot;font-size: 24px&quot;&gt;start.S&lt;br&gt;压入内存栈&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#a20025;strokeColor=#6F0000;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="-3610" y="2847" width="426.67" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="310" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="307" target="309">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="307" value="&lt;font style=&quot;font-size: 36px&quot;&gt;shell&lt;br&gt;shell脚本实现&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e3c800;strokeColor=#B09500;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="-3640" y="-1669.9999999999998" width="426.67" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="308" value="" style="endArrow=classic;html=1;fontSize=19;strokeWidth=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="307" source="hhxS7JBDP3Vizc06WxIX-105">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="-1790" y="-1550.0049999999983" as="sourcePoint"/>
+                        <mxPoint x="-3250" y="-1975.9899999999998" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="314" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="309" target="313">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="318" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="309" target="317">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="309" value="&lt;font style=&quot;font-size: 36px&quot;&gt;shell/buildin-cmd.c &amp;amp;&amp;amp; shell/buildin-cmd.h&lt;br&gt;构建命令&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="-3800" y="-1210" width="750" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="331" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=55;" edge="1" parent="1" source="311" target="330">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="311" value="&lt;font style=&quot;font-size: 24px&quot;&gt;userprog/fork.c &amp;amp;&amp;amp; userprog/fork.h&lt;br&gt;创建子进程&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=19;" vertex="1" parent="1">
+                    <mxGeometry x="-2741.67" y="4609.999999999999" width="570" height="104.69" as="geometry"/>
+                </mxCell>
+                <mxCell id="316" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="313" target="315">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="313" value="&lt;font style=&quot;font-size: 36px&quot;&gt;kernel/memory.c &amp;amp;&amp;amp; kernel/memory.h&lt;br&gt;获取子进程内存&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="-4970" y="-1210" width="906.67" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="322" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="315" target="321">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="315" value="&lt;font style=&quot;font-size: 36px&quot;&gt;fs/fs.c &amp;amp;&amp;amp; fs/fs.h&lt;br&gt;实现系统调用功能&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="-4970" y="-910" width="906.67" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="320" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="317" target="319">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="317" value="&lt;font style=&quot;font-size: 36px&quot;&gt;shell/pipe.c &amp;amp;&amp;amp; shell/pipe.h&lt;br&gt;构建管道&amp;nbsp;&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="-3730" y="-750" width="610" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="319" value="&lt;font style=&quot;font-size: 36px&quot;&gt;shell/shell.c &amp;amp;&amp;amp; shell/shell.h&lt;br&gt;shell实现&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="-3731.66" y="-310" width="610" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="324" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="321" target="323">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="321" value="&lt;font style=&quot;font-size: 36px&quot;&gt;.....&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="-4970" y="-670" width="906.67" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="323" value="&lt;font style=&quot;font-size: 36px&quot;&gt;涉及到太多系统调用的命令的实现了，&lt;br&gt;直接用grep来看方便一点&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="-4970" y="-290" width="906.67" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="325" value="" style="swimlane;startSize=0;strokeColor=#00FFFF;strokeWidth=6;" vertex="1" parent="1">
+                    <mxGeometry x="-5100" y="-1350" width="2170" height="2020" as="geometry"/>
+                </mxCell>
+                <mxCell id="327" value="&lt;span style=&quot;font-size: 55px&quot;&gt;shell实现&lt;br&gt;11&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fillColor=#0050ef;strokeColor=#001DBC;fontColor=#ffffff;" vertex="1" parent="325">
+                    <mxGeometry x="1400" y="1480" width="500" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="328" value="&lt;span style=&quot;font-size: 24px&quot;&gt;lib/user/assert.c &amp;amp;&amp;amp; lib/user/assert.h&lt;br&gt;用户空间的断言&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="-1310" y="7940" width="530" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="330" value="&lt;font style=&quot;font-size: 24px&quot;&gt;userprog/wait_exit.c &amp;amp;&amp;amp; userprog/wait_exit,h&lt;br&gt;实现wait_exit功能&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=19;" vertex="1" parent="1">
+                    <mxGeometry x="-2741.67" y="4794.689999999999" width="570" height="104.69" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
