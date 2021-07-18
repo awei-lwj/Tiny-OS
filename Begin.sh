@@ -5,6 +5,7 @@ sudo apt-get install libgtk2.0-dev   -y
 sudo apt-get install bison           -y
 sudo apt-get install gcc             -y
 sudo apt-get install nasm            -y
+sudo apt install make                -y
 
 echo "Unpack the bochs-2.6.11.tar.gz"
 cd tool
