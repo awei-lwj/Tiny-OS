@@ -1,0 +1,1154 @@
+<mxfile>
+    <diagram id="RNF21H4a_6WYeM8Fk3ME" name="boot/mbr.S">
+        <mxGraphModel grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" page="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="&lt;font style=&quot;font-size: 14px&quot;&gt;SECTION MBR vstart = 0x7c00&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="191" y="130" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="4" target="14" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="初始化&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="191" y="260" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="&lt;font style=&quot;font-size: 14px&quot;&gt;用CS寄存器的值去初始化其他寄存器&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="511" y="140" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#60a917;strokeColor=#2D7600;" parent="1" source="7" target="8" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="&lt;font style=&quot;font-size: 14px&quot;&gt;初始化内存栈&lt;br&gt;mov sp, 0x7c00&amp;nbsp;&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="511" y="260" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="&lt;font style=&quot;font-size: 14px&quot;&gt;往gs寄存器里面存入段基址&lt;br&gt;mov ax , 0xb800&lt;br&gt;mov&amp;nbsp; gs, ax&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="481" y="370" width="180" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="2" target="4" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="261" y="280" as="sourcePoint"/>
+                        <mxPoint x="401" y="210" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="10" value="" style="endArrow=classic;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fillColor=#60a917;strokeColor=#2D7600;" parent="1" source="5" target="7" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="561" y="230" as="sourcePoint"/>
+                        <mxPoint x="311" y="230" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="11" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" parent="1" source="4" target="5" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="261" y="280" as="sourcePoint"/>
+                        <mxPoint x="311" y="230" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="12" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" parent="1" source="4" target="8" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="261" y="280" as="sourcePoint"/>
+                        <mxPoint x="311" y="230" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="14" target="16" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="清理屏幕，并且初始化上卷窗口" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="191" y="390" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="16" target="18" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="输出跳动字符串&lt;br&gt;”1 MBR“&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="191" y="500" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="18" target="20" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="初始化起始扇区的lba地址&lt;br&gt;以及相应的写入的逻辑地址" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="166" y="610" width="170" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="20" target="21" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="rd_disk_m_16:&lt;br&gt;实现读取n个扇区" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="166" y="720" width="170" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="jmp LOADER_BASE_ADDR&lt;br&gt;跳转到内核加载器那里" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="166" y="850" width="170" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#60a917;strokeColor=#2D7600;" parent="1" source="23" target="25" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="设置要读取的扇区数" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="511" y="550" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#60a917;strokeColor=#2D7600;" parent="1" source="25" target="27" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="将LBA地址存入&lt;br&gt;0x1f4 ~ 0x1f6&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="511" y="650" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#60a917;strokeColor=#2D7600;" parent="1" source="27" target="29" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="向0x1f7端口写入命令" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="511" y="750" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#60a917;strokeColor=#2D7600;" parent="1" source="29" target="30" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="检测硬盘状态" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="511" y="850" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="从0x1f0端口读数据" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="511" y="950" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="" style="endArrow=none;dashed=1;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;" parent="1" source="20" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="421" y="760" as="sourcePoint"/>
+                        <mxPoint x="511" y="550" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="32" value="" style="endArrow=none;dashed=1;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" parent="1" source="20" target="30" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="421" y="920" as="sourcePoint"/>
+                        <mxPoint x="471" y="870" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="DlSjpZhp9afUf0HAMf74" name="boot/loader.S">
+        <mxGraphModel dx="6411" dy="3819" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-0"/>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-1" parent="WkHX13kfnzKGAfEsJaD6-0"/>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;" parent="WkHX13kfnzKGAfEsJaD6-1" source="WkHX13kfnzKGAfEsJaD6-3" target="WkHX13kfnzKGAfEsJaD6-5" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-3" value="SECTION loader vstart=LOADER_BASE_ADDR&lt;br style=&quot;font-size: 24px;&quot;&gt;LOADER_STACK_TOP equ LOADER_BASE_ADDR" style="rounded=1;whiteSpace=wrap;html=1;fontSize=24;" parent="WkHX13kfnzKGAfEsJaD6-1" vertex="1">
+                    <mxGeometry x="85" y="20" width="410" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;" parent="WkHX13kfnzKGAfEsJaD6-1" source="WkHX13kfnzKGAfEsJaD6-5" target="WkHX13kfnzKGAfEsJaD6-72" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-5" value="初始化构建各种乱七八糟的描述符符号" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" parent="WkHX13kfnzKGAfEsJaD6-1" vertex="1">
+                    <mxGeometry x="65" y="220" width="450" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;" parent="WkHX13kfnzKGAfEsJaD6-1" source="WkHX13kfnzKGAfEsJaD6-7" target="WkHX13kfnzKGAfEsJaD6-3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-7" value="include &quot;boot.inc&quot;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=36;fillColor=#647687;strokeColor=#314354;fontColor=#ffffff;" parent="WkHX13kfnzKGAfEsJaD6-1" vertex="1">
+                    <mxGeometry x="-320" y="50" width="320" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-8" value="" style="shape=table;html=1;whiteSpace=wrap;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=19;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" parent="WkHX13kfnzKGAfEsJaD6-1" vertex="1">
+                    <mxGeometry x="1350" y="-270" width="1380" height="855" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-9" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-8" vertex="1">
+                    <mxGeometry width="1380" height="57" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-10" value="属性" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-9" vertex="1">
+                    <mxGeometry width="312" height="57" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-11" value="&lt;span style=&quot;font-size: 19px;&quot;&gt;数值&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-9" vertex="1">
+                    <mxGeometry x="312" width="430" height="57" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-12" value="&lt;span style=&quot;font-size: 19px;&quot;&gt;备注&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-9" vertex="1">
+                    <mxGeometry x="742" width="638" height="57" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-13" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-8" vertex="1">
+                    <mxGeometry y="57" width="1380" height="57" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-14" value="GDT_BASE" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-13" vertex="1">
+                    <mxGeometry width="312" height="57" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-15" value="dd 0x0000_FFFF&amp;nbsp; &amp;nbsp; dd DESC_CODE_HIGH4" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-13" vertex="1">
+                    <mxGeometry x="312" width="430" height="57" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-16" value="构建GDT以及内部的描述符" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-13" vertex="1">
+                    <mxGeometry x="742" width="638" height="57" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-17" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-8" vertex="1">
+                    <mxGeometry y="114" width="1380" height="57" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-18" value="CODE_DESC" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-17" vertex="1">
+                    <mxGeometry width="312" height="57" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-19" value="dd 0x0000_FFFF&amp;nbsp; &amp;nbsp; dd DESC_CODE_HIGH4" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-17" vertex="1">
+                    <mxGeometry x="312" width="430" height="57" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-20" value="代码段描述符，一个dd为4字节，段描述符为8字节，上面为低4字节" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-17" vertex="1">
+                    <mxGeometry x="742" width="638" height="57" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-21" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-8" vertex="1">
+                    <mxGeometry y="171" width="1380" height="57" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-22" value="DATA_STACK_DESC" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-21" vertex="1">
+                    <mxGeometry width="312" height="57" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-23" value="dd 0x0000_FFFF&amp;nbsp; &amp;nbsp; dd DESC_CODE_HIGH4" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-21" vertex="1">
+                    <mxGeometry x="312" width="430" height="57" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-24" value="栈堆描述符,和数据段共用" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-21" vertex="1">
+                    <mxGeometry x="742" width="638" height="57" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-25" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-8" vertex="1">
+                    <mxGeometry y="228" width="1380" height="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-26" value="VIDEO_DESC" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-25" vertex="1">
+                    <mxGeometry width="312" height="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-27" value="dd 0x8000_0007&amp;nbsp; &amp;nbsp; dd DESC_VIDEO_HIGH4" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-25" vertex="1">
+                    <mxGeometry x="312" width="430" height="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-28" value="显存描述符，非平坦" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-25" vertex="1">
+                    <mxGeometry x="742" width="638" height="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-29" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-8" vertex="1">
+                    <mxGeometry y="286" width="1380" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-30" value="GDT_SIZE" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-29" vertex="1">
+                    <mxGeometry width="312" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-31" value="$ - GDT_BASE" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-29" vertex="1">
+                    <mxGeometry x="312" width="430" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-32" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-29" vertex="1">
+                    <mxGeometry x="742" width="638" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-33" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-8" vertex="1">
+                    <mxGeometry y="342" width="1380" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-34" value="GDT_LIMIT" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-33" vertex="1">
+                    <mxGeometry width="312" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-35" value="GDT_SIZE - 1" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-33" vertex="1">
+                    <mxGeometry x="312" width="430" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-36" value="这是为加载GDT做准备" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-33" vertex="1">
+                    <mxGeometry x="742" width="638" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-37" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-8" vertex="1">
+                    <mxGeometry y="398" width="1380" height="59" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-38" value="times 60 dq 0" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-37" vertex="1">
+                    <mxGeometry width="312" height="59" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-39" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-37" vertex="1">
+                    <mxGeometry x="312" width="430" height="59" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-40" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-37" vertex="1">
+                    <mxGeometry x="742" width="638" height="59" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-41" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-8" vertex="1">
+                    <mxGeometry y="457" width="1380" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-42" value="SELECTOR_CODE" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-41" vertex="1">
+                    <mxGeometry width="312" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-43" value="(0x0001 &amp;lt;&amp;lt; 3) + TI_GDT + RPL0" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-41" vertex="1">
+                    <mxGeometry x="312" width="430" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-44" value="(CODE_DESC - GDT_BASE)/8 + TI_GDT + RPL0" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-41" vertex="1">
+                    <mxGeometry x="742" width="638" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-45" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-8" vertex="1">
+                    <mxGeometry y="513" width="1380" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-46" value="SELECTOR_DATA" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-45" vertex="1">
+                    <mxGeometry width="312" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-47" value="(0x0002 &amp;lt;&amp;lt; 3) + TI_GDT + RPL0" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-45" vertex="1">
+                    <mxGeometry x="312" width="430" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-48" value="数据段和栈堆是统一描述符" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-45" vertex="1">
+                    <mxGeometry x="742" width="638" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-49" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-8" vertex="1">
+                    <mxGeometry y="569" width="1380" height="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-50" value="SELECTOR_VIDEO" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-49" vertex="1">
+                    <mxGeometry width="312" height="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-51" value="(0x0003 &amp;lt;&amp;lt; 3) + TI_GDT + RPL0" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-49" vertex="1">
+                    <mxGeometry x="312" width="430" height="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-52" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-49" vertex="1">
+                    <mxGeometry x="742" width="638" height="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-53" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-8" vertex="1">
+                    <mxGeometry y="627" width="1380" height="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-54" value="total_mem_bytes" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-53" vertex="1">
+                    <mxGeometry width="312" height="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-55" value="0" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-53" vertex="1">
+                    <mxGeometry x="312" width="430" height="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-56" value="total_mem_bytes用于保存内存容量，以字节为单位" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-53" vertex="1">
+                    <mxGeometry x="742" width="638" height="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-57" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-8" vertex="1">
+                    <mxGeometry y="685" width="1380" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-58" value="gdt_ptr" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-57" vertex="1">
+                    <mxGeometry width="312" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-59" value="dw GDT_LIMIT&amp;nbsp; &amp;nbsp; dd GDT_BASE" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-57" vertex="1">
+                    <mxGeometry x="312" width="430" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-60" value="以下是gdt的指针，前2字节是gdt界限，后4字节是gdt起始地址" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-57" vertex="1">
+                    <mxGeometry x="742" width="638" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-61" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-8" vertex="1">
+                    <mxGeometry y="741" width="1380" height="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-62" value="ards_buf times 244 db 0" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-61" vertex="1">
+                    <mxGeometry width="312" height="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-63" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-61" vertex="1">
+                    <mxGeometry x="312" width="430" height="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-64" value="提前定义的1缓冲区，存储BIOS 0x15中断0xe820子功能返回的ARDS结构" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-61" vertex="1">
+                    <mxGeometry x="742" width="638" height="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-65" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-8" vertex="1">
+                    <mxGeometry y="799" width="1380" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-66" value="ards_nr dw 0" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-65" vertex="1">
+                    <mxGeometry width="312" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-67" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-65" vertex="1">
+                    <mxGeometry x="312" width="430" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-68" value="用来记录ARDS结构体数量" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;fontSize=19;" parent="WkHX13kfnzKGAfEsJaD6-65" vertex="1">
+                    <mxGeometry x="742" width="638" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-69" value="" style="endArrow=classic;html=1;fontSize=24;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="WkHX13kfnzKGAfEsJaD6-1" source="WkHX13kfnzKGAfEsJaD6-5" target="WkHX13kfnzKGAfEsJaD6-65" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="670" y="-60" as="sourcePoint"/>
+                        <mxPoint x="720" y="-110" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-70" value="" style="endArrow=classic;html=1;fontSize=24;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="WkHX13kfnzKGAfEsJaD6-1" source="WkHX13kfnzKGAfEsJaD6-5" target="WkHX13kfnzKGAfEsJaD6-9" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="670" y="-60" as="sourcePoint"/>
+                        <mxPoint x="720" y="-110" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-71" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;" parent="WkHX13kfnzKGAfEsJaD6-1" source="WkHX13kfnzKGAfEsJaD6-72" target="WkHX13kfnzKGAfEsJaD6-81" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-72" value="loader_start&lt;br style=&quot;font-size: 24px;&quot;&gt;三种方式获取内存布局" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" parent="WkHX13kfnzKGAfEsJaD6-1" vertex="1">
+                    <mxGeometry x="100" y="390" width="380" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-73" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;" parent="WkHX13kfnzKGAfEsJaD6-1" source="WkHX13kfnzKGAfEsJaD6-74" target="WkHX13kfnzKGAfEsJaD6-76" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-74" value="int 15h eax = 0000E820h,edx = 534D4150h('SMAP')获取内存布局" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" parent="WkHX13kfnzKGAfEsJaD6-1" vertex="1">
+                    <mxGeometry x="-530" y="260" width="500" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="no9VKXdVVPkWTkjIZFNL-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;" parent="WkHX13kfnzKGAfEsJaD6-1" source="WkHX13kfnzKGAfEsJaD6-76" target="no9VKXdVVPkWTkjIZFNL-0" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="x1T5OBBWBYivLI4izrJA-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;strokeColor=#FFFFFF;" edge="1" parent="WkHX13kfnzKGAfEsJaD6-1" source="WkHX13kfnzKGAfEsJaD6-76" target="no9VKXdVVPkWTkjIZFNL-0">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-76" value="int 15h ax = E801h 获取内存的大小，最大支持4G" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" parent="WkHX13kfnzKGAfEsJaD6-1" vertex="1">
+                    <mxGeometry x="-530" y="380" width="500" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-78" value="" style="endArrow=none;dashed=1;html=1;fontSize=24;entryX=1;entryY=0;entryDx=0;entryDy=0;exitX=0;exitY=0;exitDx=0;exitDy=0;" parent="WkHX13kfnzKGAfEsJaD6-1" source="WkHX13kfnzKGAfEsJaD6-72" target="WkHX13kfnzKGAfEsJaD6-74" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="-130" y="480" as="sourcePoint"/>
+                        <mxPoint x="-80" y="430" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-79" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;fontSize=24;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" parent="WkHX13kfnzKGAfEsJaD6-1" target="WkHX13kfnzKGAfEsJaD6-72" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="-30.000000000000455" y="560" as="sourcePoint"/>
+                        <mxPoint x="-80" y="430" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="no9VKXdVVPkWTkjIZFNL-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;" parent="WkHX13kfnzKGAfEsJaD6-1" source="WkHX13kfnzKGAfEsJaD6-81" target="no9VKXdVVPkWTkjIZFNL-2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-81" value="准备进入保护模式" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" parent="WkHX13kfnzKGAfEsJaD6-1" vertex="1">
+                    <mxGeometry x="100" y="730" width="380" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-82" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;fillColor=#60a917;strokeColor=#FFFFFF;" parent="WkHX13kfnzKGAfEsJaD6-1" source="WkHX13kfnzKGAfEsJaD6-83" target="WkHX13kfnzKGAfEsJaD6-85" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-83" value="1 打开A20" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" parent="WkHX13kfnzKGAfEsJaD6-1" vertex="1">
+                    <mxGeometry x="640" y="620" width="410" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-84" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;fillColor=#60a917;strokeColor=#FFFFFF;" parent="WkHX13kfnzKGAfEsJaD6-1" source="WkHX13kfnzKGAfEsJaD6-85" target="WkHX13kfnzKGAfEsJaD6-86" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-85" value="2 加载gdt" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" parent="WkHX13kfnzKGAfEsJaD6-1" vertex="1">
+                    <mxGeometry x="645" y="730" width="400" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-86" value="3 将cr0的pe位置1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" parent="WkHX13kfnzKGAfEsJaD6-1" vertex="1">
+                    <mxGeometry x="645" y="830" width="400" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-87" value="" style="endArrow=none;dashed=1;html=1;fontSize=24;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" parent="WkHX13kfnzKGAfEsJaD6-1" source="WkHX13kfnzKGAfEsJaD6-81" target="WkHX13kfnzKGAfEsJaD6-83" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="700" y="780" as="sourcePoint"/>
+                        <mxPoint x="750" y="730" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-88" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;fontSize=24;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" parent="WkHX13kfnzKGAfEsJaD6-1" source="WkHX13kfnzKGAfEsJaD6-81" target="WkHX13kfnzKGAfEsJaD6-86" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="700" y="780" as="sourcePoint"/>
+                        <mxPoint x="750" y="730" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-89" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;" parent="WkHX13kfnzKGAfEsJaD6-1" target="WkHX13kfnzKGAfEsJaD6-94" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="290" y="1070" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-91" value="出错则挂起" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" parent="WkHX13kfnzKGAfEsJaD6-1" vertex="1">
+                    <mxGeometry x="645" y="1010" width="395" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-92" value="" style="endArrow=classic;html=1;fontSize=24;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="WkHX13kfnzKGAfEsJaD6-1" target="WkHX13kfnzKGAfEsJaD6-91" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="479.99999999999955" y="1040" as="sourcePoint"/>
+                        <mxPoint x="240" y="920" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-93" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;" parent="WkHX13kfnzKGAfEsJaD6-1" source="WkHX13kfnzKGAfEsJaD6-94" target="WkHX13kfnzKGAfEsJaD6-96" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-94" value="32位模式" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" parent="WkHX13kfnzKGAfEsJaD6-1" vertex="1">
+                    <mxGeometry x="100" y="1200" width="380" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="no9VKXdVVPkWTkjIZFNL-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;" parent="WkHX13kfnzKGAfEsJaD6-1" source="WkHX13kfnzKGAfEsJaD6-96" target="no9VKXdVVPkWTkjIZFNL-4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-96" value="p_mode_start" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" parent="WkHX13kfnzKGAfEsJaD6-1" vertex="1">
+                    <mxGeometry x="100" y="1430" width="380" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-97" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;" parent="WkHX13kfnzKGAfEsJaD6-1" source="WkHX13kfnzKGAfEsJaD6-98" target="WkHX13kfnzKGAfEsJaD6-101" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-98" value="用于选择子初始化成各段寄存器" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" parent="WkHX13kfnzKGAfEsJaD6-1" vertex="1">
+                    <mxGeometry x="-711.5" y="820" width="490" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-99" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;" parent="WkHX13kfnzKGAfEsJaD6-1" source="WkHX13kfnzKGAfEsJaD6-101" target="WkHX13kfnzKGAfEsJaD6-102" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-100" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;" parent="WkHX13kfnzKGAfEsJaD6-1" source="WkHX13kfnzKGAfEsJaD6-101" target="WkHX13kfnzKGAfEsJaD6-104" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-101" value="加载kernel" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" parent="WkHX13kfnzKGAfEsJaD6-1" vertex="1">
+                    <mxGeometry x="-713" y="970" width="493" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-102" value="&lt;font style=&quot;font-size: 24px&quot;&gt;mov eax, KERNEL_START_SECTOR ; kernel.bin所在的扇区号&lt;br style=&quot;font-size: 24px;&quot;&gt;mov ebx, KERNEL_BIN_BASE_ADDR ; 从磁盘读出，写入到ebx指定的地址&lt;br style=&quot;font-size: 24px;&quot;&gt;mov ecx, 200 ; 读入的扇区数&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" parent="WkHX13kfnzKGAfEsJaD6-1" vertex="1">
+                    <mxGeometry x="-1670" y="910" width="870" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-103" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;" parent="WkHX13kfnzKGAfEsJaD6-1" source="WkHX13kfnzKGAfEsJaD6-104" target="WkHX13kfnzKGAfEsJaD6-106" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-104" value="call rd_disk_m_32 ; 用于从硬盘中读文件" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" parent="WkHX13kfnzKGAfEsJaD6-1" vertex="1">
+                    <mxGeometry x="-713" y="1090" width="493" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-105" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;" parent="WkHX13kfnzKGAfEsJaD6-1" source="WkHX13kfnzKGAfEsJaD6-106" target="WkHX13kfnzKGAfEsJaD6-108" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-106" value="创建页目录及页表并初始化页内存位图" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" parent="WkHX13kfnzKGAfEsJaD6-1" vertex="1">
+                    <mxGeometry x="-713" y="1210" width="493" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-107" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;" parent="WkHX13kfnzKGAfEsJaD6-1" source="WkHX13kfnzKGAfEsJaD6-108" target="WkHX13kfnzKGAfEsJaD6-110" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-108" value="要将描述符地址及偏移量写入内存gdt_ptr，一会用新地址重新加载,为了重启加载GDT作准备" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" parent="WkHX13kfnzKGAfEsJaD6-1" vertex="1">
+                    <mxGeometry x="-711.5" y="1330" width="490" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-109" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;" parent="WkHX13kfnzKGAfEsJaD6-1" source="WkHX13kfnzKGAfEsJaD6-110" target="WkHX13kfnzKGAfEsJaD6-112" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-110" value="将gdt描述符中视频段描述符中的段基址+0xc0000_000，修改显存段的段描述符的段基址" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" parent="WkHX13kfnzKGAfEsJaD6-1" vertex="1">
+                    <mxGeometry x="-713" y="1520" width="493" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-111" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;" parent="WkHX13kfnzKGAfEsJaD6-1" source="WkHX13kfnzKGAfEsJaD6-112" target="WkHX13kfnzKGAfEsJaD6-114" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-112" value="将gdt的基址加上0xc0000_000使其成为内核所在的高地址" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" parent="WkHX13kfnzKGAfEsJaD6-1" vertex="1">
+                    <mxGeometry x="-713" y="1694" width="493" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-113" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;" parent="WkHX13kfnzKGAfEsJaD6-1" source="WkHX13kfnzKGAfEsJaD6-114" target="WkHX13kfnzKGAfEsJaD6-115" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-114" value="打开cr0的pg位（第31位）" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" parent="WkHX13kfnzKGAfEsJaD6-1" vertex="1">
+                    <mxGeometry x="-713" y="1810" width="493" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-115" value="开启分页后，用gdt新的地址重新加载" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" parent="WkHX13kfnzKGAfEsJaD6-1" vertex="1">
+                    <mxGeometry x="-713" y="1920" width="493" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-116" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;fontSize=24;entryX=0;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0;exitDx=0;exitDy=0;" parent="WkHX13kfnzKGAfEsJaD6-1" source="WkHX13kfnzKGAfEsJaD6-98" target="WkHX13kfnzKGAfEsJaD6-96" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="-260" y="1280" as="sourcePoint"/>
+                        <mxPoint x="-210" y="1230" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-117" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;fontSize=24;entryX=0;entryY=1;entryDx=0;entryDy=0;exitX=1;exitY=1;exitDx=0;exitDy=0;" parent="WkHX13kfnzKGAfEsJaD6-1" source="WkHX13kfnzKGAfEsJaD6-115" target="WkHX13kfnzKGAfEsJaD6-96" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="-260" y="1280" as="sourcePoint"/>
+                        <mxPoint x="-210" y="1230" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-120" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;" parent="WkHX13kfnzKGAfEsJaD6-1" target="WkHX13kfnzKGAfEsJaD6-123" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="536.5000000000005" y="1850" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-121" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;" parent="WkHX13kfnzKGAfEsJaD6-1" target="WkHX13kfnzKGAfEsJaD6-124" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="290.00000000000045" y="1880" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-123" value="逐字节拷贝 mem_cpy(dst,src,size)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" parent="WkHX13kfnzKGAfEsJaD6-1" vertex="1">
+                    <mxGeometry x="630" y="1630" width="493" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-124" value="创建页目录及页表" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" parent="WkHX13kfnzKGAfEsJaD6-1" vertex="1">
+                    <mxGeometry x="43.5" y="2280" width="493" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-125" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;fillColor=#60a917;strokeColor=#FFFFFF;" parent="WkHX13kfnzKGAfEsJaD6-1" source="WkHX13kfnzKGAfEsJaD6-126" target="WkHX13kfnzKGAfEsJaD6-128" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-126" value="先把页目录占有的空间逐字节清0" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" parent="WkHX13kfnzKGAfEsJaD6-1" vertex="1">
+                    <mxGeometry x="660" y="2070" width="493" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="no9VKXdVVPkWTkjIZFNL-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;fillColor=#60a917;strokeColor=#FFFFFF;" parent="WkHX13kfnzKGAfEsJaD6-1" source="WkHX13kfnzKGAfEsJaD6-128" target="no9VKXdVVPkWTkjIZFNL-8" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-128" value="开始创建页目录（PDE）" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" parent="WkHX13kfnzKGAfEsJaD6-1" vertex="1">
+                    <mxGeometry x="660" y="2200" width="493" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-132" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;fontSize=24;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" parent="WkHX13kfnzKGAfEsJaD6-1" source="WkHX13kfnzKGAfEsJaD6-124" target="WkHX13kfnzKGAfEsJaD6-126" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="790" y="2160" as="sourcePoint"/>
+                        <mxPoint x="840" y="2110" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="WkHX13kfnzKGAfEsJaD6-133" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;fontSize=24;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" parent="WkHX13kfnzKGAfEsJaD6-1" source="WkHX13kfnzKGAfEsJaD6-124" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1050" y="2220" as="sourcePoint"/>
+                        <mxPoint x="660" y="2510" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="no9VKXdVVPkWTkjIZFNL-0" value="&amp;nbsp;int 15h ax = 0x88 获取内存的大小，只能获取64MB以内" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" parent="WkHX13kfnzKGAfEsJaD6-1" vertex="1">
+                    <mxGeometry x="-530" y="510" width="500" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="no9VKXdVVPkWTkjIZFNL-2" value="&lt;div style=&quot;font-size: 24px;&quot;&gt;jmp dword SELECTOR_CODE:p_mode_start&lt;/div&gt;&lt;div style=&quot;font-size: 24px;&quot;&gt;刷新流水线，避免分支预测的影响&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" parent="WkHX13kfnzKGAfEsJaD6-1" vertex="1">
+                    <mxGeometry x="100" y="990" width="380" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="no9VKXdVVPkWTkjIZFNL-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;" parent="WkHX13kfnzKGAfEsJaD6-1" source="no9VKXdVVPkWTkjIZFNL-4" target="no9VKXdVVPkWTkjIZFNL-6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="no9VKXdVVPkWTkjIZFNL-4" value="&lt;font style=&quot;font-size: 24px&quot;&gt;enter_kernel&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" parent="WkHX13kfnzKGAfEsJaD6-1" vertex="1">
+                    <mxGeometry x="100" y="1640" width="380" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="no9VKXdVVPkWTkjIZFNL-6" value="将kernel.bin中的segment拷贝到编译的地址" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" parent="WkHX13kfnzKGAfEsJaD6-1" vertex="1">
+                    <mxGeometry x="50" y="1820" width="480" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="no9VKXdVVPkWTkjIZFNL-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;fillColor=#60a917;strokeColor=#FFFFFF;" parent="WkHX13kfnzKGAfEsJaD6-1" source="no9VKXdVVPkWTkjIZFNL-8" target="no9VKXdVVPkWTkjIZFNL-12" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="no9VKXdVVPkWTkjIZFNL-8" value="下面创建页表项(PTE)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" parent="WkHX13kfnzKGAfEsJaD6-1" vertex="1">
+                    <mxGeometry x="660" y="2320" width="493" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="no9VKXdVVPkWTkjIZFNL-12" value="创建内核其他页表的PDE" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" parent="WkHX13kfnzKGAfEsJaD6-1" vertex="1">
+                    <mxGeometry x="660" y="2460" width="493" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="x1T5OBBWBYivLI4izrJA-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontSize=24;strokeColor=#FFFFFF;" edge="1" parent="WkHX13kfnzKGAfEsJaD6-1" source="WkHX13kfnzKGAfEsJaD6-7" target="WkHX13kfnzKGAfEsJaD6-7">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="-J_10oL8ZxM4_xzlw6fb" name="boot/include/boot.inc">
+        <mxGraphModel dx="2246" dy="1514" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="jZRfUEOgBYb4_nJOopRR-0"/>
+                <mxCell id="jZRfUEOgBYb4_nJOopRR-1" parent="jZRfUEOgBYb4_nJOopRR-0"/>
+                <mxCell id="TrEKvcYK20v8du-099jV-0" value="" style="shape=table;html=1;whiteSpace=wrap;startSize=0;container=1;collapsible=0;childLayout=tableLayout;" parent="jZRfUEOgBYb4_nJOopRR-1" vertex="1">
+                    <mxGeometry x="60" y="90" width="950" height="340" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-1" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TrEKvcYK20v8du-099jV-0" vertex="1">
+                    <mxGeometry width="950" height="43" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-2" value="属性" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-1" vertex="1">
+                    <mxGeometry width="222" height="43" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-3" value="数值" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-1" vertex="1">
+                    <mxGeometry x="222" width="348" height="43" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-4" value="备注" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-1" vertex="1">
+                    <mxGeometry x="570" width="380" height="43" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-5" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TrEKvcYK20v8du-099jV-0" vertex="1">
+                    <mxGeometry y="43" width="950" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-6" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: &amp;quot;droid sans mono&amp;quot;, monospace, monospace, &amp;quot;droid sans fallback&amp;quot;; font-weight: normal; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #d4d4d4&quot;&gt;LOADER_BASE_ADDR&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-5" vertex="1">
+                    <mxGeometry width="222" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-7" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;0x900&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-5" vertex="1">
+                    <mxGeometry x="222" width="348" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-8" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: #6a9955&quot;&gt;定义了loader在内存中的位置,loader&lt;/span&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-5" vertex="1">
+                    <mxGeometry x="570" width="380" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-9" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TrEKvcYK20v8du-099jV-0" vertex="1">
+                    <mxGeometry y="85" width="950" height="43" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-10" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: &amp;quot;droid sans mono&amp;quot;, monospace, monospace, &amp;quot;droid sans fallback&amp;quot;; font-weight: normal; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #d4d4d4&quot;&gt;LOADER_STACK_TOP&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-9" vertex="1">
+                    <mxGeometry width="222" height="43" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-11" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: &amp;quot;droid sans mono&amp;quot;, monospace, monospace, &amp;quot;droid sans fallback&amp;quot;; font-weight: normal; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #569cd6&quot;&gt;equ&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4&quot;&gt;  LOADER_BASE_ADDR&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-9" vertex="1">
+                    <mxGeometry x="222" width="348" height="43" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-12" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: #6a9955&quot;&gt;栈指针&lt;/span&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-9" vertex="1">
+                    <mxGeometry x="570" width="380" height="43" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-13" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TrEKvcYK20v8du-099jV-0" vertex="1">
+                    <mxGeometry y="128" width="950" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-14" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;LOADER_START_SECTOR&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-13" vertex="1">
+                    <mxGeometry width="222" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-15" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: &amp;quot;droid sans mono&amp;quot;, monospace, monospace, &amp;quot;droid sans fallback&amp;quot;; font-weight: normal; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #d4d4d4&quot;&gt;0x2&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-13" vertex="1">
+                    <mxGeometry x="222" width="348" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-16" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: #6a9955&quot;&gt;loader在硬盘中的逻辑扇区地址 ,LBA addresses&lt;/span&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-13" vertex="1">
+                    <mxGeometry x="570" width="380" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-17" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TrEKvcYK20v8du-099jV-0" vertex="1">
+                    <mxGeometry y="170" width="950" height="43" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-18" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-17" vertex="1">
+                    <mxGeometry width="222" height="43" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-19" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-17" vertex="1">
+                    <mxGeometry x="222" width="348" height="43" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-20" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-17" vertex="1">
+                    <mxGeometry x="570" width="380" height="43" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-21" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TrEKvcYK20v8du-099jV-0" vertex="1">
+                    <mxGeometry y="213" width="950" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-22" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: &amp;quot;droid sans mono&amp;quot;, monospace, monospace, &amp;quot;droid sans fallback&amp;quot;; font-weight: normal; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #d4d4d4&quot;&gt;KERNEL_BIN_BASE_ADDR&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-21" vertex="1">
+                    <mxGeometry width="222" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-23" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;0x7000_0&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-21" vertex="1">
+                    <mxGeometry x="222" width="348" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-24" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: &amp;quot;droid sans mono&amp;quot;, monospace, monospace, &amp;quot;droid sans fallback&amp;quot;; font-weight: normal; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955&quot;&gt;kernel加载的地方&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-21" vertex="1">
+                    <mxGeometry x="570" width="380" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-25" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TrEKvcYK20v8du-099jV-0" vertex="1">
+                    <mxGeometry y="255" width="950" height="43" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-26" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: &amp;quot;droid sans mono&amp;quot;, monospace, monospace, &amp;quot;droid sans fallback&amp;quot;; font-weight: normal; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #d4d4d4&quot;&gt;KERNEL_START_SECTOR&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-25" vertex="1">
+                    <mxGeometry width="222" height="43" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-27" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;0x9&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-25" vertex="1">
+                    <mxGeometry x="222" width="348" height="43" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-28" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-25" vertex="1">
+                    <mxGeometry x="570" width="380" height="43" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-29" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TrEKvcYK20v8du-099jV-0" vertex="1">
+                    <mxGeometry y="298" width="950" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-30" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: &amp;quot;droid sans mono&amp;quot;, monospace, monospace, &amp;quot;droid sans fallback&amp;quot;; font-weight: normal; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #d4d4d4&quot;&gt;KERNEL_ENTRY_POINT&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-29" vertex="1">
+                    <mxGeometry width="222" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-31" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;0xc000_1500&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-29" vertex="1">
+                    <mxGeometry x="222" width="348" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-32" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-29" vertex="1">
+                    <mxGeometry x="570" width="380" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-33" value="loader and kernel" style="rounded=0;whiteSpace=wrap;html=1;" parent="jZRfUEOgBYb4_nJOopRR-1" vertex="1">
+                    <mxGeometry x="270" width="360" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-34" value="" style="shape=table;html=1;whiteSpace=wrap;startSize=0;container=1;collapsible=0;childLayout=tableLayout;" parent="jZRfUEOgBYb4_nJOopRR-1" vertex="1">
+                    <mxGeometry x="1060" y="90" width="940" height="842" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-35" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TrEKvcYK20v8du-099jV-34" vertex="1">
+                    <mxGeometry width="940" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-36" value="&lt;div style=&quot;background-color: rgb(30 , 30 , 30) ; line-height: 19px&quot;&gt;&lt;font color=&quot;#d4d4d4&quot; face=&quot;droid sans mono, monospace, monospace, droid sans fallback&quot;&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;属性&lt;/span&gt;&lt;/font&gt;&lt;br&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-35" vertex="1">
+                    <mxGeometry width="220" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-37" value="&lt;span&gt;数值&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-35" vertex="1">
+                    <mxGeometry x="220" width="350" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-38" value="&lt;span&gt;备注&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-35" vertex="1">
+                    <mxGeometry x="570" width="370" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-39" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TrEKvcYK20v8du-099jV-34" vertex="1">
+                    <mxGeometry y="42" width="940" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-40" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;DESC_G_4K&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-39" vertex="1">
+                    <mxGeometry width="220" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-41" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;1_0000_0000_0000_0000_0000_000b&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-39" vertex="1">
+                    <mxGeometry x="220" width="350" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-42" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: #6a9955&quot;&gt;描述符的G位为4k粒度&lt;/span&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-39" vertex="1">
+                    <mxGeometry x="570" width="370" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-43" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TrEKvcYK20v8du-099jV-34" vertex="1">
+                    <mxGeometry y="84" width="940" height="41" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-44" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;DESC_D_32&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-43" vertex="1">
+                    <mxGeometry width="220" height="41" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-45" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;1_0000_0000_0000_0000_0000_00b&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-43" vertex="1">
+                    <mxGeometry x="220" width="350" height="41" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-46" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: #6a9955&quot;&gt;用来指示有效地址&lt;/span&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-43" vertex="1">
+                    <mxGeometry x="570" width="370" height="41" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-47" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TrEKvcYK20v8du-099jV-34" vertex="1">
+                    <mxGeometry y="125" width="940" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-48" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;DESC_L&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-47" vertex="1">
+                    <mxGeometry width="220" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-49" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;0_0000_0000_0000_0000_000_00b&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-47" vertex="1">
+                    <mxGeometry x="220" width="350" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-50" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: #6a9955&quot;&gt;64位代码标记，此处标记为0便可。&lt;/span&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-47" vertex="1">
+                    <mxGeometry x="570" width="370" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-51" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TrEKvcYK20v8du-099jV-34" vertex="1">
+                    <mxGeometry y="167" width="940" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-52" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: &amp;quot;droid sans mono&amp;quot;, monospace, monospace, &amp;quot;droid sans fallback&amp;quot;; font-weight: normal; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #d4d4d4&quot;&gt;DESC_AVL&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-51" vertex="1">
+                    <mxGeometry width="220" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-53" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;0_0000_0000_0000_0000_000_0b&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-51" vertex="1">
+                    <mxGeometry x="220" width="350" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-54" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: #6a9955&quot;&gt;cpu不用此位，暂置为0 &lt;/span&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-51" vertex="1">
+                    <mxGeometry x="570" width="370" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-55" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TrEKvcYK20v8du-099jV-34" vertex="1">
+                    <mxGeometry y="209" width="940" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-56" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;DESC_LIMIT_CODE2&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-55" vertex="1">
+                    <mxGeometry width="220" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-57" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;1111_0000_0000_0000_0000_b&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-55" vertex="1">
+                    <mxGeometry x="220" width="350" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-58" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: #6a9955&quot;&gt;代码段的段界限的第二部分&lt;/span&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-55" vertex="1">
+                    <mxGeometry x="570" width="370" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-59" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TrEKvcYK20v8du-099jV-34" vertex="1">
+                    <mxGeometry y="251" width="940" height="41" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-60" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;DESC_LIMIT_DATA2&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-59" vertex="1">
+                    <mxGeometry width="220" height="41" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-61" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: &amp;quot;droid sans mono&amp;quot;, monospace, monospace, &amp;quot;droid sans fallback&amp;quot;; font-weight: normal; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #569cd6&quot;&gt;equ&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4&quot;&gt;  DESC_LIMIT_CODE2&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-59" vertex="1">
+                    <mxGeometry x="220" width="350" height="41" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-62" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: #6a9955&quot;&gt;数据段的段界限的第二部分&lt;/span&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-59" vertex="1">
+                    <mxGeometry x="570" width="370" height="41" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-63" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TrEKvcYK20v8du-099jV-34" vertex="1">
+                    <mxGeometry y="292" width="940" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-64" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: &amp;quot;droid sans mono&amp;quot;, monospace, monospace, &amp;quot;droid sans fallback&amp;quot;; font-weight: normal; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #d4d4d4&quot;&gt;DESC_LIMIT_VIDEO2&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-63" vertex="1">
+                    <mxGeometry width="220" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-65" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;0000_0000_0000_0000_000b&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-63" vertex="1">
+                    <mxGeometry x="220" width="350" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-66" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: #6a9955&quot;&gt;video段的段界限的第二部分&lt;/span&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-63" vertex="1">
+                    <mxGeometry x="570" width="370" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-67" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TrEKvcYK20v8du-099jV-34" vertex="1">
+                    <mxGeometry y="334" width="940" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-68" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: &amp;quot;droid sans mono&amp;quot;, monospace, monospace, &amp;quot;droid sans fallback&amp;quot;; font-weight: normal; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #d4d4d4&quot;&gt;DESC_P&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-67" vertex="1">
+                    <mxGeometry width="220" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-69" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;div style=&quot;font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; line-height: 19px&quot;&gt;1_0000_0000_0000_000b&lt;/div&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-67" vertex="1">
+                    <mxGeometry x="220" width="350" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-70" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: #6a9955&quot;&gt;Present，段是否存&lt;/span&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-67" vertex="1">
+                    <mxGeometry x="570" width="370" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-71" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TrEKvcYK20v8du-099jV-34" vertex="1">
+                    <mxGeometry y="376" width="940" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-72" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;div style=&quot;font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; line-height: 19px&quot;&gt;DESC_DPL_0&lt;/div&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-71" vertex="1">
+                    <mxGeometry width="220" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-73" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;00_0000_0000_0000_0b&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-71" vertex="1">
+                    <mxGeometry x="220" width="350" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-74" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: &amp;quot;droid sans mono&amp;quot;, monospace, monospace, &amp;quot;droid sans fallback&amp;quot;; font-weight: normal; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955&quot;&gt;DPL字段，描述符号特权级别&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-71" vertex="1">
+                    <mxGeometry x="570" width="370" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-75" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TrEKvcYK20v8du-099jV-34" vertex="1">
+                    <mxGeometry y="418" width="940" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-76" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: &amp;quot;droid sans mono&amp;quot;, monospace, monospace, &amp;quot;droid sans fallback&amp;quot;; font-weight: normal; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #d4d4d4&quot;&gt;DESC_DPL_1&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-75" vertex="1">
+                    <mxGeometry width="220" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-77" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: &amp;quot;droid sans mono&amp;quot;, monospace, monospace, &amp;quot;droid sans fallback&amp;quot;; font-weight: normal; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #d4d4d4&quot;&gt;01_0000_0000_0000_0b&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-75" vertex="1">
+                    <mxGeometry x="220" width="350" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-78" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: &amp;quot;droid sans mono&amp;quot;, monospace, monospace, &amp;quot;droid sans fallback&amp;quot;; font-weight: normal; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955&quot;&gt;特权级别1&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-75" vertex="1">
+                    <mxGeometry x="570" width="370" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-79" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TrEKvcYK20v8du-099jV-34" vertex="1">
+                    <mxGeometry y="460" width="940" height="41" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-80" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: &amp;quot;droid sans mono&amp;quot;, monospace, monospace, &amp;quot;droid sans fallback&amp;quot;; font-weight: normal; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #d4d4d4&quot;&gt;DESC_DPL_2&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-79" vertex="1">
+                    <mxGeometry width="220" height="41" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-81" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: &amp;quot;droid sans mono&amp;quot;, monospace, monospace, &amp;quot;droid sans fallback&amp;quot;; font-weight: normal; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #d4d4d4&quot;&gt;10_0000_0000_0000_0b&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-79" vertex="1">
+                    <mxGeometry x="220" width="350" height="41" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-82" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: &amp;quot;droid sans mono&amp;quot;, monospace, monospace, &amp;quot;droid sans fallback&amp;quot;; font-weight: normal; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955&quot;&gt;特权级别2&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-79" vertex="1">
+                    <mxGeometry x="570" width="370" height="41" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-83" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TrEKvcYK20v8du-099jV-34" vertex="1">
+                    <mxGeometry y="501" width="940" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-84" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: &amp;quot;droid sans mono&amp;quot;, monospace, monospace, &amp;quot;droid sans fallback&amp;quot;; font-weight: normal; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #d4d4d4&quot;&gt;DESC_DPL_3&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-83" vertex="1">
+                    <mxGeometry width="220" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-85" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: &amp;quot;droid sans mono&amp;quot;, monospace, monospace, &amp;quot;droid sans fallback&amp;quot;; font-weight: normal; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #d4d4d4&quot;&gt;11_0000_0000_0000_0b&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-83" vertex="1">
+                    <mxGeometry x="220" width="350" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-86" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: &amp;quot;droid sans mono&amp;quot;, monospace, monospace, &amp;quot;droid sans fallback&amp;quot;; font-weight: normal; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955&quot;&gt;特权级别3&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-83" vertex="1">
+                    <mxGeometry x="570" width="370" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-87" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TrEKvcYK20v8du-099jV-34" vertex="1">
+                    <mxGeometry y="543" width="940" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-88" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: &amp;quot;droid sans mono&amp;quot;, monospace, monospace, &amp;quot;droid sans fallback&amp;quot;; font-weight: normal; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #d4d4d4&quot;&gt;DESC_S_CODE&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-87" vertex="1">
+                    <mxGeometry width="220" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-89" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: &amp;quot;droid sans mono&amp;quot;, monospace, monospace, &amp;quot;droid sans fallback&amp;quot;; font-weight: normal; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #d4d4d4&quot;&gt;1_0000_0000_0000_b&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-87" vertex="1">
+                    <mxGeometry x="220" width="350" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-90" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: &amp;quot;droid sans mono&amp;quot;, monospace, monospace, &amp;quot;droid sans fallback&amp;quot;; font-weight: normal; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955&quot;&gt;代码段的S位，此值为1，表示为普通的内存段&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-87" vertex="1">
+                    <mxGeometry x="570" width="370" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-91" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TrEKvcYK20v8du-099jV-34" vertex="1">
+                    <mxGeometry y="585" width="940" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-92" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: &amp;quot;droid sans mono&amp;quot;, monospace, monospace, &amp;quot;droid sans fallback&amp;quot;; font-weight: normal; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #d4d4d4&quot;&gt;DESC_S_DATA&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-91" vertex="1">
+                    <mxGeometry width="220" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-93" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: &amp;quot;droid sans mono&amp;quot;, monospace, monospace, &amp;quot;droid sans fallback&amp;quot;; font-weight: normal; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #569cd6&quot;&gt;equ&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4&quot;&gt;  DESC_S_CODE&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-91" vertex="1">
+                    <mxGeometry x="220" width="350" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-94" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: &amp;quot;droid sans mono&amp;quot;, monospace, monospace, &amp;quot;droid sans fallback&amp;quot;; font-weight: normal; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955&quot;&gt;数据段的S位&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-91" vertex="1">
+                    <mxGeometry x="570" width="370" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-95" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TrEKvcYK20v8du-099jV-34" vertex="1">
+                    <mxGeometry y="627" width="940" height="41" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-96" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: &amp;quot;droid sans mono&amp;quot;, monospace, monospace, &amp;quot;droid sans fallback&amp;quot;; font-weight: normal; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #d4d4d4&quot;&gt;DESC_S_sys&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-95" vertex="1">
+                    <mxGeometry width="220" height="41" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-97" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: &amp;quot;droid sans mono&amp;quot;, monospace, monospace, &amp;quot;droid sans fallback&amp;quot;; font-weight: normal; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #d4d4d4&quot;&gt;0_0000_0000_0000_b&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-95" vertex="1">
+                    <mxGeometry x="220" width="350" height="41" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-98" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: &amp;quot;droid sans mono&amp;quot;, monospace, monospace, &amp;quot;droid sans fallback&amp;quot;; font-weight: normal; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955&quot;&gt;系统段的S位&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-95" vertex="1">
+                    <mxGeometry x="570" width="370" height="41" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-99" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TrEKvcYK20v8du-099jV-34" vertex="1">
+                    <mxGeometry y="668" width="940" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-100" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: &amp;quot;droid sans mono&amp;quot;, monospace, monospace, &amp;quot;droid sans fallback&amp;quot;; font-weight: normal; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #d4d4d4&quot;&gt;DESC_TYPE_CODE&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-99" vertex="1">
+                    <mxGeometry width="220" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-101" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;1000_0000_0000_b&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-99" vertex="1">
+                    <mxGeometry x="220" width="350" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-102" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: #6a9955&quot;&gt;定义了一个代码段的type&lt;/span&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-99" vertex="1">
+                    <mxGeometry x="570" width="370" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-103" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TrEKvcYK20v8du-099jV-34" vertex="1">
+                    <mxGeometry y="710" width="940" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-104" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: &amp;quot;droid sans mono&amp;quot;, monospace, monospace, &amp;quot;droid sans fallback&amp;quot;; font-weight: normal; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #d4d4d4&quot;&gt;DESC_TYPE_DATA&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-103" vertex="1">
+                    <mxGeometry width="220" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-105" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: &amp;quot;droid sans mono&amp;quot;, monospace, monospace, &amp;quot;droid sans fallback&amp;quot;; font-weight: normal; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #d4d4d4&quot;&gt;0010_0000_0000_b&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-103" vertex="1">
+                    <mxGeometry x="220" width="350" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-106" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: &amp;quot;droid sans mono&amp;quot;, monospace, monospace, &amp;quot;droid sans fallback&amp;quot;; font-weight: normal; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955&quot;&gt;定义了一个数据段的type&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-103" vertex="1">
+                    <mxGeometry x="570" width="370" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-107" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TrEKvcYK20v8du-099jV-34" vertex="1">
+                    <mxGeometry y="750" width="940" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-108" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;br&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-107" vertex="1">
+                    <mxGeometry width="220" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-109" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-107" vertex="1">
+                    <mxGeometry x="220" width="350" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-110" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-107" vertex="1">
+                    <mxGeometry x="570" width="370" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-111" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TrEKvcYK20v8du-099jV-34" vertex="1">
+                    <mxGeometry y="800" width="940" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-112" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;br&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-111" vertex="1">
+                    <mxGeometry width="220" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-113" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-111" vertex="1">
+                    <mxGeometry x="220" width="350" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-114" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-111" vertex="1">
+                    <mxGeometry x="570" width="370" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-115" value="" style="shape=table;html=1;whiteSpace=wrap;startSize=0;container=1;collapsible=0;childLayout=tableLayout;" parent="jZRfUEOgBYb4_nJOopRR-1" vertex="1">
+                    <mxGeometry x="1060" y="980" width="940" height="410" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-116" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TrEKvcYK20v8du-099jV-115" vertex="1">
+                    <mxGeometry width="940" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-117" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;DESC_CODE_HIGH4&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-116" vertex="1">
+                    <mxGeometry width="220" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-118" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;(0x00 &amp;lt;&amp;lt; &lt;span style=&quot;color: #b5cea8&quot;&gt;24&lt;/span&gt;) + DESC_G_4K + DESC_D_32 + DESC_L + DESC_AVL + DESC_LIMIT_CODE2  + DESC_P + DESC_DPL_0 + DESC_S_CODE + DESC_TYPE_CODE + 0x00&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-116" vertex="1">
+                    <mxGeometry x="220" width="350" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-119" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-116" vertex="1">
+                    <mxGeometry x="570" width="370" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-120" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TrEKvcYK20v8du-099jV-115" vertex="1">
+                    <mxGeometry y="120" width="940" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-121" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;DESC_DATA_HIGH4&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-120" vertex="1">
+                    <mxGeometry width="220" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-122" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;(0x00 &amp;lt;&amp;lt; &lt;span style=&quot;color: #b5cea8&quot;&gt;24&lt;/span&gt;) + DESC_G_4K + DESC_D_32 + DESC_L + DESC_AVL + DESC_LIMIT_DATA2  + DESC_P + DESC_DPL_0 + DESC_S_DATA + DESC_TYPE_DATA + 0x00&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-120" vertex="1">
+                    <mxGeometry x="220" width="350" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-123" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-120" vertex="1">
+                    <mxGeometry x="570" width="370" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-124" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TrEKvcYK20v8du-099jV-115" vertex="1">
+                    <mxGeometry y="260" width="940" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-125" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;DESC_VIDEO_HIGH4&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-124" vertex="1">
+                    <mxGeometry width="220" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-126" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;(0x00 &amp;lt;&amp;lt; &lt;span style=&quot;color: #b5cea8&quot;&gt;24&lt;/span&gt;) + DESC_G_4K + DESC_D_32 + DESC_L + DESC_AVL + DESC_LIMIT_VIDEO2 + DESC_P + DESC_DPL_0 + DESC_S_DATA + DESC_TYPE_DATA + 0x0b&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-124" vertex="1">
+                    <mxGeometry x="220" width="350" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-127" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-124" vertex="1">
+                    <mxGeometry x="570" width="370" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-128" value="" style="shape=table;html=1;whiteSpace=wrap;startSize=0;container=1;collapsible=0;childLayout=tableLayout;" parent="jZRfUEOgBYb4_nJOopRR-1" vertex="1">
+                    <mxGeometry x="1060" y="1440" width="930" height="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-129" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TrEKvcYK20v8du-099jV-128" vertex="1">
+                    <mxGeometry width="930" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-130" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;RPL0 &lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-129" vertex="1">
+                    <mxGeometry width="220" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-131" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;00b&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-129" vertex="1">
+                    <mxGeometry x="220" width="350" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-132" value="特权级别" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-129" vertex="1">
+                    <mxGeometry x="570" width="360" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-133" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TrEKvcYK20v8du-099jV-128" vertex="1">
+                    <mxGeometry y="40" width="930" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-134" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;RPL1&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-133" vertex="1">
+                    <mxGeometry width="220" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-135" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: &amp;quot;droid sans mono&amp;quot;, monospace, monospace, &amp;quot;droid sans fallback&amp;quot;; font-weight: normal; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #d4d4d4&quot;&gt;01b&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-133" vertex="1">
+                    <mxGeometry x="220" width="350" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-136" value="特权级别" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-133" vertex="1">
+                    <mxGeometry x="570" width="360" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-137" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TrEKvcYK20v8du-099jV-128" vertex="1">
+                    <mxGeometry y="80" width="930" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-138" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: &amp;quot;droid sans mono&amp;quot;, monospace, monospace, &amp;quot;droid sans fallback&amp;quot;; font-weight: normal; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #d4d4d4&quot;&gt;RPL2&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-137" vertex="1">
+                    <mxGeometry width="220" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-139" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;10b&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-137" vertex="1">
+                    <mxGeometry x="220" width="350" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-140" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-137" vertex="1">
+                    <mxGeometry x="570" width="360" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-141" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TrEKvcYK20v8du-099jV-128" vertex="1">
+                    <mxGeometry y="120" width="930" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-142" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: &amp;quot;droid sans mono&amp;quot;, monospace, monospace, &amp;quot;droid sans fallback&amp;quot;; font-weight: normal; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #d4d4d4&quot;&gt;RPL3&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-141" vertex="1">
+                    <mxGeometry width="220" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-143" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;11b&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-141" vertex="1">
+                    <mxGeometry x="220" width="350" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-144" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-141" vertex="1">
+                    <mxGeometry x="570" width="360" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-145" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TrEKvcYK20v8du-099jV-128" vertex="1">
+                    <mxGeometry y="160" width="930" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-146" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: &amp;quot;droid sans mono&amp;quot;, monospace, monospace, &amp;quot;droid sans fallback&amp;quot;; font-weight: normal; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #d4d4d4&quot;&gt;TI_GDT&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-145" vertex="1">
+                    <mxGeometry width="220" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-147" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: &amp;quot;droid sans mono&amp;quot;, monospace, monospace, &amp;quot;droid sans fallback&amp;quot;; font-weight: normal; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #d4d4d4&quot;&gt;000b&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-145" vertex="1">
+                    <mxGeometry x="220" width="350" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-148" value="GDT 或者 LDT 的选择" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-145" vertex="1">
+                    <mxGeometry x="570" width="360" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-149" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TrEKvcYK20v8du-099jV-128" vertex="1">
+                    <mxGeometry y="200" width="930" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-150" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: &amp;quot;droid sans mono&amp;quot;, monospace, monospace, &amp;quot;droid sans fallback&amp;quot;; font-weight: normal; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #d4d4d4&quot;&gt;TI_LDT&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-149" vertex="1">
+                    <mxGeometry width="220" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-151" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;100b&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-149" vertex="1">
+                    <mxGeometry x="220" width="350" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-152" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-149" vertex="1">
+                    <mxGeometry x="570" width="360" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-153" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TrEKvcYK20v8du-099jV-128" vertex="1">
+                    <mxGeometry y="240" width="930" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-154" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-153" vertex="1">
+                    <mxGeometry width="220" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-155" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-153" vertex="1">
+                    <mxGeometry x="220" width="350" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-156" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-153" vertex="1">
+                    <mxGeometry x="570" width="360" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-157" value="GDT" style="rounded=0;whiteSpace=wrap;html=1;" parent="jZRfUEOgBYb4_nJOopRR-1" vertex="1">
+                    <mxGeometry x="1340" y="10" width="360" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-158" value="" style="shape=table;html=1;whiteSpace=wrap;startSize=0;container=1;collapsible=0;childLayout=tableLayout;" parent="jZRfUEOgBYb4_nJOopRR-1" vertex="1">
+                    <mxGeometry x="65" y="670" width="940" height="320" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-159" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TrEKvcYK20v8du-099jV-158" vertex="1">
+                    <mxGeometry width="940" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-160" value="&lt;span style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; background-color: rgb(30 , 30 , 30)&quot;&gt;属性&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-159" vertex="1">
+                    <mxGeometry width="215" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-161" value="&lt;span&gt;数值&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-159" vertex="1">
+                    <mxGeometry x="215" width="350" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-162" value="&lt;span&gt;备注&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-159" vertex="1">
+                    <mxGeometry x="565" width="375" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-163" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TrEKvcYK20v8du-099jV-158" vertex="1">
+                    <mxGeometry y="40" width="940" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-164" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;PAGE_DIR_TABLE_POS&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-163" vertex="1">
+                    <mxGeometry width="215" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-165" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;0x1000_00&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-163" vertex="1">
+                    <mxGeometry x="215" width="350" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-166" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: #6a9955&quot;&gt;页表配置&lt;/span&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-163" vertex="1">
+                    <mxGeometry x="565" width="375" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-167" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TrEKvcYK20v8du-099jV-158" vertex="1">
+                    <mxGeometry y="80" width="940" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-168" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;PG_P&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-167" vertex="1">
+                    <mxGeometry width="215" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-169" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;1b&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-167" vertex="1">
+                    <mxGeometry x="215" width="350" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-170" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: #6a9955&quot;&gt;页表相关属性&lt;/span&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-167" vertex="1">
+                    <mxGeometry x="565" width="375" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-171" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TrEKvcYK20v8du-099jV-158" vertex="1">
+                    <mxGeometry y="120" width="940" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-172" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;PG_RW_R&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-171" vertex="1">
+                    <mxGeometry width="215" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-173" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;00b&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-171" vertex="1">
+                    <mxGeometry x="215" width="350" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-174" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-171" vertex="1">
+                    <mxGeometry x="565" width="375" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-175" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TrEKvcYK20v8du-099jV-158" vertex="1">
+                    <mxGeometry y="160" width="940" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-176" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;PG_RW_W&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-175" vertex="1">
+                    <mxGeometry width="215" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-177" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;10b&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-175" vertex="1">
+                    <mxGeometry x="215" width="350" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-178" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-175" vertex="1">
+                    <mxGeometry x="565" width="375" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-179" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TrEKvcYK20v8du-099jV-158" vertex="1">
+                    <mxGeometry y="200" width="940" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-180" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: &amp;quot;droid sans mono&amp;quot;, monospace, monospace, &amp;quot;droid sans fallback&amp;quot;; font-weight: normal; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #d4d4d4&quot;&gt;PG_US_S&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-179" vertex="1">
+                    <mxGeometry width="215" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-181" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;000b&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-179" vertex="1">
+                    <mxGeometry x="215" width="350" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-182" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-179" vertex="1">
+                    <mxGeometry x="565" width="375" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-183" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TrEKvcYK20v8du-099jV-158" vertex="1">
+                    <mxGeometry y="240" width="940" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-184" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;PG_US_U&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-183" vertex="1">
+                    <mxGeometry width="215" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-185" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;100b&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-183" vertex="1">
+                    <mxGeometry x="215" width="350" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-186" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-183" vertex="1">
+                    <mxGeometry x="565" width="375" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-187" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TrEKvcYK20v8du-099jV-158" vertex="1">
+                    <mxGeometry y="280" width="940" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-188" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;PT_NULL &lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-187" vertex="1">
+                    <mxGeometry width="215" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-189" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: #b5cea8&quot;&gt;0&lt;/span&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-187" vertex="1">
+                    <mxGeometry x="215" width="350" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-190" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: &amp;quot;droid sans mono&amp;quot;, monospace, monospace, &amp;quot;droid sans fallback&amp;quot;; font-weight: normal; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955&quot;&gt;program type 定义&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TrEKvcYK20v8du-099jV-187" vertex="1">
+                    <mxGeometry x="565" width="375" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TrEKvcYK20v8du-099jV-191" value="PAGE" style="rounded=0;whiteSpace=wrap;html=1;" parent="jZRfUEOgBYb4_nJOopRR-1" vertex="1">
+                    <mxGeometry x="280" y="585" width="360" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
