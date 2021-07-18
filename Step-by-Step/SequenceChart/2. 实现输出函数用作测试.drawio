@@ -1,0 +1,43 @@
+<mxfile>
+    <diagram id="iuySKydNKLW6VJwnBLsU" name="lib/kernel/print.S">
+        <mxGraphModel dx="3417" dy="345" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" target="11">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-575" y="1533" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="11" target="14">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-575" y="1744" as="sourcePoint"/>
+                        <mxPoint x="-575" y="1825" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="11" value="&lt;font style=&quot;font-size: 24px&quot;&gt;lib/kernel/print.h&lt;br&gt;显存输出函数的头文件&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=19;" vertex="1" parent="1">
+                    <mxGeometry x="-700" y="1623" width="250" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="" style="swimlane;startSize=0;fontSize=19;fontColor=#ffffff;fillColor=#1BA1E2;strokeColor=#00FFFF;strokeWidth=6;" vertex="1" parent="1">
+                    <mxGeometry x="-1400" y="1584" width="1030" height="390" as="geometry">
+                        <mxRectangle x="-2150" y="2080" width="50" height="40" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="13" value="lib/kernel/print.S&lt;br style=&quot;font-size: 24px&quot;&gt;分别实现了三个函数" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=24;" vertex="1" parent="12">
+                    <mxGeometry x="280" y="251" width="290" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="&lt;font style=&quot;font-size: 24px&quot;&gt;lib/kernel/print.S&lt;br&gt;用汇编语言实现显存输出函数&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=19;" vertex="1" parent="12">
+                    <mxGeometry x="650" y="251" width="350" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="12" source="14" target="13">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="650" y="281" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="16" value="&lt;font style=&quot;font-size: 55px&quot;&gt;实现输出函数用作测试&lt;br&gt;2&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=19;fillColor=#0050ef;strokeColor=#001DBC;fontColor=#ffffff;" vertex="1" parent="12">
+                    <mxGeometry x="30" y="20" width="592" height="171" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
