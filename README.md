@@ -21,6 +21,8 @@ Tiny-OS操作系统内核是一个基于Intel x86平台的32位处理器的系�
 这里的话把整体实现思路列举出来：
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210718182847336.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODc3NTI0,size_16,color_FFFFFF,t_70#pic_center)
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210718212039574.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODc3NTI0,size_16,color_FFFFFF,t_70)
 ### 2. 系统功能列表以及展示
 | 系统功能列表 | 完成状态 |---------|系统功能列表 | 完成状态 |
 |--|--|--|--|--|
