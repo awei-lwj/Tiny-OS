@@ -129,7 +129,7 @@ Tiny-OS的文件结构：
 ## 8. 给awei倒杯冰阔落
 最后，各位靓仔美女，能不能请我喝一杯冰阔落
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210718204953214.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODc3NTI0,size_16,color_FFFFFF,t_70)
-## 9. 给各位靓仔美女来波buff加成
+## 9. 最后给各位靓仔美女来波buff加成
 
 ```asm
 ;;-------------------------------------------------------------------;;
