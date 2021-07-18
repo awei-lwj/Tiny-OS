@@ -13,7 +13,7 @@
 
 ```
 ## 1. 项目背景
-Tiny-OS操作系统内核是一个基于Intel x86平台的32位处理器的系统内核，可以运行在bochs（一个x86硬件平台的开源模拟器）的虚拟机中，使用的虚拟机开发环境为Ubuntu 20.04 + VMware workstation。
+Tiny-OS操作系统内核是一个基于Intel x86平台的32位处理器的系统，可以运行在bochs（一个x86硬件平台的开源模拟器）的虚拟机中，使用的虚拟机开发环境为Ubuntu 20.04 + VMware workstation。
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210718202646756.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODc3NTI0,size_16,color_FFFFFF,t_70)
 
