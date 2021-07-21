@@ -36,7 +36,7 @@ Tiny-OS操作系统内核是一个基于Intel x86平台的32位处理器的系�
 | IDE硬盘驱动 | Done |---------| 蜂鸣器 | TODO |
 | KeyBoard键盘驱动 | Done |---------| 应用程序 | TODO |
 | 输入输出函数 | Done |---------| 一个Tiny版本的TCP/IP协议栈 | TODO |
-| 异常处理 | Done |---------| CMAKE | TODO |
+| 异常处理 | Done |---------| CMAKEtest做编译 | TODO |
 
 功能展示：
 
